@@ -1,0 +1,109 @@
+/*Custom CSS*/
+
+.text_justify {
+  text-align:justify;
+  text-justify:inter-word;
+}
+
+.login_buttn{
+	margin-top: 5px
+}
+
+.center {
+	float: none;
+	margin: auto
+}
+
+.widget-container.fluid-height {
+	overflow: auto;
+}
+
+.leftt{
+	float: left
+}
+
+.biggy{
+	font-size: 20px;
+	font-weight: 300;
+}
+
+/*Custom Datatable CSS*/
+.my_data_tab td {
+	font-size: 13px;
+}
+
+.my_data_tab th {
+	font-size: 12px
+}
+
+.txt_center{
+	text-align: center;
+}
+
+.txt_left{
+	text-align: left;
+}
+
+.txt_right{
+	text-align: right;
+}
+
+.ppic_height {
+	max-height: 250px;
+	max-width: 200px;
+}
+.mpic_height {
+	height: 500px;
+	width: 300px;
+}
+
+.kpic_height {
+	max-height: 250px;
+	width: 500px;
+}
+.new_member {
+	max-width: 61px;
+	height: 70px;
+	border:1px solid black
+}
+.new_member1 {
+	max-width: 121px;
+	height: 70px;
+	border:1px solid black
+}
+.max_height_45 {
+	max-height: 45px;
+}
+.max_height_350 {
+	max-height: 350px;
+}
+
+.form_tbl td{
+	padding: 10px
+}
+.paddingb {
+	padding-bottom: 10px
+}
+a{
+	cursor: pointer;
+}
+
+.mtop20{
+	margin-top: 20px
+}
+
+.mbtm20{
+	margin-bottom: 20px
+}
+
+.mleft10{
+	margin-left: 10px;
+}
+
+.mright10{
+	margin-right: 10px
+}
+
+.f12{
+	font-size: 14px
+}

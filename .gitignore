@@ -1,0 +1,15 @@
+.DS_Store
+
+back_end/application/cache/*
+!back_end/application/cache/index.html
+!back_end/application/cache/.htaccess
+
+application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess
+
+front_end/bower_components/
+front_end/node_modules/
+*.log
+*.zip
+*.sql
