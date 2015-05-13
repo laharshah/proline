@@ -24,9 +24,23 @@
 </head>
 	<body>
 		<div class="modal-shiftfix">
+		
+			<!-- This is nav bar view from folder views/navbar.html -->
+
+			<div ng-include src="'views/navbar.html'"></div>
+
+
 			
 			<!-- COmmon View -->
 			<div ng-view class="view-slide-in"></div>
+
+
+
+
+			<!-- This is footer of application from folder views/navbar.html -->
+
+			<div ng-include src="'views/footer.html'"></div>
+
 
 		</div>
 	</body>

@@ -5,7 +5,13 @@ angular.module('prolineApp', [
 		'ui.bootstrap',
 		'xeditable',
 		'prolineApp.auth',
-		'prolineApp.welcome'
+		'prolineApp.welcome',
+		'prolineApp.club-fitting',
+		'prolineApp.club-repair',
+		'prolineApp.contact',
+		'prolineApp.corporate-sales',
+		'prolineApp.instruction',
+		'prolineApp.product'
 	]);
 
 angular.module('prolineApp').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
