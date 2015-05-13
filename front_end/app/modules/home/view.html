@@ -2,5 +2,35 @@
 
 <center style="padding-top:50px"><h2>Proline home page</h2></center>
 
+<ul>
+	8,000 Sq. Ft. of Golf Right in the Heart of Chicago
 
+312-738-2427 | 925 w Chicago Ave
+
+</ul>
+
+<ul>
+	slider images are in : assets/images/home-slideibar
+</ul>
+<hr />
+<ul>
+	<li>img name : small_indoor_golf_2</li>
+	<li>title : CHICAGO'S HOME FOR INDOOR GOLF</li>
+	<li>content : Proline Golf offers a full service golf shop, indoor golf simulators, PGA golf lessons, and BYOB. Call 312-738-2427 for more information.</li>
+</ul>
+
+<ul>
+	<li>img name : small_Home13_Chicago_Golf_Lessons</li>
+	<li>title : RESERVE A SIMULATOR NOW!</li>
+	<li>content : Book a simulator for practice, indoor golf, or PGA lessons Right Now! CLICK BOOK NOW!</li>
+	<li><a href="https://booknow.appointment-plus.com/6r0crrgy/" target="_blank">Book Now</a></li>
+</ul>
+
+<ul ng-repeat="article in articles track by $index">
+	<li>image name: {{article.imgnmae}}</li>
+	<li>Heading : {{article.heading}}</li>
+	<li>Content : {{article.content}}</li>
+	<li><a href="#!/{{article.pagelink}}"> Read more</a></li>
+</ul>
+	
 </div>
