@@ -19,6 +19,8 @@ angular.module('prolineApp').controller('homeController', function($scope, $loca
         imgname: 'small_65976_340786959371741_1214184585_n',
         pagelink: 'club-fitting'
     }];
+})
+angular.module('prolineApp').controller('carouselController', function($scope) {
     $scope.myInterval = 3000;
     $scope.slides = [{
         image: 'https://proline-laharshah.c9.io/front_end/app/assets/images/home-slideibar/very_large_1.jpg'
