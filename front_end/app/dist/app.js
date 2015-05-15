@@ -257,8 +257,9 @@ angular.module('prolineApp').controller('instructionController', function ($scop
   							facebook:'https://www.facebook.com/gaberiosgolf',
   							twitter:'https://twitter.com/gaberiosgolf',
   							linkedin:'http://www.linkedin.com/in/gaberiosgolf/',
-  							imgpath: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/102/image/large_thumb_gaberios.JPG'
-  						},
+  							imgpath: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/102/image/large_thumb_gaberios.JPG',
+  						  inid:'in1'
+              },
   						{
   							name:'Marcus Yado',
   							about:'Marcus Yado is a PGA Professional and golf instructor in downtown Chicago. He has taught over 7,000 lessons since 2009 to players of all skill levels and backgrounds. Marcus focuses on helping his students develop the essential skills needed to play quality golf. His students become well rounded golfers in every part of the game, not just full swing. He also helps teach the details of the short game, mental game and proper practice. Marcus makes custom game plans for his students based on their specific goals and limitations. He uses video to analyze his client\'s swings then uploads their lesson to their e-mail or cell phone. Marcus also uses Flightscope technology to show his clients their ball flight as well as how their club moves through impact. He believes in keeping instruction simple and strives to maintain a fun learning environment for his students.',
@@ -266,7 +267,8 @@ angular.module('prolineApp').controller('instructionController', function ($scop
   							facebook:'https://www.facebook.com/mychicagogolf',
   							twitter: false,
   							linkedin: false,
-  							imgpath: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/4/image/large_thumb_yado_corny_pic.jpg'
+  							imgpath: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/4/image/large_thumb_yado_corny_pic.jpg',
+                inid:'in2'
   						},
   						{
   							name:'Scott Thomas',
@@ -275,7 +277,8 @@ angular.module('prolineApp').controller('instructionController', function ($scop
   							facebook:false,
   							twitter: false,
   							linkedin:'https://www.linkedin.com/pub/scott-thomas/12/215/185',
-  							imgpth:''
+  							imgpth:'https:no image',
+                inid:'in3'
   						},
   						{
   							name:'Scott Hogan',
@@ -284,8 +287,10 @@ angular.module('prolineApp').controller('instructionController', function ($scop
   							facebook:false,
   							twitter:false,
   							linkedin:false,
-  							imgpath : 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/3800/image/large_thumb_Scott_Hogan.jpg' 
-  						}];
+  							imgpath : 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/3800/image/large_thumb_Scott_Hogan.jpg',
+                inid:'in4' 
+  						
+              }];
 
 });;angular.module('prolineApp.instruction').factory('instructionFactory', ['$http', function ($http) {
 		
