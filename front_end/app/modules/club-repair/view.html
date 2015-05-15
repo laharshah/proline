@@ -1,7 +1,21 @@
-
-
 <div class="container">
 	<center style="padding-top:30px">
 		<h1 style="color:green">Hello You are on {{pagename}} 's page </h1>
 	</center>
+	<!-- DC Pricing Tables:1 Start -->
+	<div id="tsc_pricingtable01" class="clear">
+		<div class="{{package.type}}" ng-repeat="package in packages">
+			<h3>{{package.type}}<span>{{package.price}}</span></h3>
+			<a class="signup" href="">Sign up</a>
+			<ul>
+				<li><b>{{package.feature1name}}</b> {{package.feature1content}}</li>
+				<li><b>{{package.feature2name}}</b> {{package.feature2content}}</li>
+				<li><b>{{package.feature3name}}</b> {{package.feature3content}}</li>
+				<li><b>{{package.feature4name}}</b> {{package.feature4content}}</li>
+			</ul>
+		</div>
+	</div>
+	<!-- DC Pricing Tables:1 End -->
+	<div class="tsc_clear"></div>
+	<!-- line break/clear line -->
 </div>

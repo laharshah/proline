@@ -17,4 +17,9 @@ angular.module('prolineApp.club-fitting').config(['$routeProvider', function($ro
 angular.module('prolineApp').controller('club-fittingController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
 	
 	$scope.pagename = "club-fitting";
+	$scope.heading=[{
+		"Mizuno Shaft Optimizer",
+		"Ping nFlight",
+		"Flight Scope"
+	}]
 });
