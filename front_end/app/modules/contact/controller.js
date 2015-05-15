@@ -14,6 +14,7 @@ angular.module('prolineApp.contact').config(['$routeProvider', function($routePr
 	}
 ]);
 
+
 angular.module('prolineApp').controller('contactController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
 	
 	$scope.pagename = "contact";
