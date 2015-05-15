@@ -8,11 +8,11 @@
 	</center>
 <div>
 
-<div class="row  well well-sm" style="padding-left:60px">
+<div class="row  well well-sm">
 	<div class="col-md-12">
 		<h2>Here are our instructors</h2>
 	</div>
-	<div class="col-md-12">
+	<div class="col-md-12"  style="padding-left:50px">
 		<div class="row">
 			<div class="col-md-3" ng-repeat="instructor in instructors track by $index">
 				<div class="ol-md-12"><center>
@@ -27,13 +27,40 @@
 	</div>
 </div>
 </div>
+
+<div class="row">
+    			<div class="col-md-12" style="padding-left:50px">
+        				<div class="panel panel-default">
+						  <div class="panel-heading">
+						    <div class="row">
+						    		<div class="col-md-8"><font style="font-size:18px">Name of instructors</font></div>
+						    		<div class="col-md-4">
+						    			<a href="#" target="_blank"><input type="button" class="btn btn-primary btn-sm" value="Book Lessons" /></a> 
+						    		</div>
+						    </div>						
+						  </div>
+						  <div class="panel-body">
+						    <div class="row">
+						    	<div class="col-md-4">
+						    		<center>
+										<img src="https://fabrica-production.s3.amazonaws.com/proline-golf/item/102/image/large_thumb_gaberios.JPG" class="img-responsive img-rounded" alt="{{instructor.name}}">
+									</center>
+						    	</div>
+						    	<div class="col-md-8">
+						    	Gabe Rios is an Illinois PGA Golf Professional, founder of Gabe Rios Golf, and General Manager of Proline Golf.  His unique ability to patiently explain swing problems and quickly improve contact and direction have made him the most requested teaching professional in Chicago. As a graduate of Coastal Carolina University he earned a degree in Marketing and Professional Golf Management. He was taught the golf swing by Illinois Golf Legend Jerry Vidovic. The knowledge handed down from Jerry and Gabe’s 26 years of golfing experience make him an excellent choice for golf lessons in Chicago. Gabe is available to fix your slice 6 days a week at Proline Golf. Lesson hours are 10-6 during the week and 10-5 on Saturdays. His lessons include real time ball flight, golf course simulation, video analysis, downloadable lessons, and most importantly a patient relaxed environment to enjoy your golf lesson every time. Outdoor range and playing lessons (within 30 minutes of Chicago) are available, please call Gabe directly at 847-372-0691 for more information.
+						    	</div>
+						    </div><hr />
+						  </div>
+						</div>
+        		</div>
+        	
+    		</div>
+
 <ul ng-repeat="instructor in instructors track by $index">
 	<li>Name: {{instructor.name}} , F : {{instructor.facebook}}, T: {{instructor.twitter}}, L:{{instructor.linkedin}} </li>
 	<li>about : {{instructor.about}}</li>
 	<li><a href="{{instructor.booklink}}">Book a Lesson</a></li>
 </ul>
-
-
 </div>
 
 </div>

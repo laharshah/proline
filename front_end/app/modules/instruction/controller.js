@@ -43,7 +43,7 @@ angular.module('prolineApp').controller('instructionController', function ($scop
   							facebook:false,
   							twitter: false,
   							linkedin:'https://www.linkedin.com/pub/scott-thomas/12/215/185',
-  							imgpth:''
+  							imgpth:'https:no image'
   						},
   						{
   							name:'Scott Hogan',
