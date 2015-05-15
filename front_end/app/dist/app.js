@@ -257,7 +257,7 @@ angular.module('prolineApp').controller('instructionController', function ($scop
   							facebook:'https://www.facebook.com/gaberiosgolf',
   							twitter:'https://twitter.com/gaberiosgolf',
   							linkedin:'http://www.linkedin.com/in/gaberiosgolf/',
-  							imgpath: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/102/image/large_thumb_gaberios.JPG'
+  							imgpath: 'assets/images/instruction/large_thumb_gaberios.jpeg'
   						},
   						{
   							name:'Marcus Yado',
@@ -266,7 +266,7 @@ angular.module('prolineApp').controller('instructionController', function ($scop
   							facebook:'https://www.facebook.com/mychicagogolf',
   							twitter: false,
   							linkedin: false,
-  							imgpath: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/4/image/large_thumb_yado_corny_pic.jpg'
+  							imgpath: 'assets/images/large_thumb_yado_corny_pic.jpeg'
   						},
   						{
   							name:'Scott Thomas',
@@ -275,7 +275,7 @@ angular.module('prolineApp').controller('instructionController', function ($scop
   							facebook:false,
   							twitter: false,
   							linkedin:'https://www.linkedin.com/pub/scott-thomas/12/215/185',
-  							imgpth:''
+  							imgpth:'no image'
   						},
   						{
   							name:'Scott Hogan',
@@ -284,7 +284,7 @@ angular.module('prolineApp').controller('instructionController', function ($scop
   							facebook:false,
   							twitter:false,
   							linkedin:false,
-  							imgpath : 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/3800/image/large_thumb_Scott_Hogan.jpg' 
+  							imgpath : 'assets/images/large_thumb_Scott_Hogan.jpeg' 
   						}];
 
 });;angular.module('prolineApp.instruction').factory('instructionFactory', ['$http', function ($http) {
