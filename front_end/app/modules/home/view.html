@@ -1,38 +1,78 @@
-
-
 <div clas="row" style="padding-top:100px">
 
-<center><h2>Proline home page</h2></center>
+	<!-- Header Carousel -->
+	<header id="myCarousel" class="carousel slide">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
 
-<ul>
-	8,000 Sq. Ft. of Golf Right in the Heart of Chicago
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<div class="fill" style="background-image:url('assets/images/home-slideibar=Slide One');"></div>
+				<div class="carousel-caption">
+					<h2>Caption 1</h2>
+				</div>
+			</div>
+			<div class="item">
+				<div class="fill" style="background-image:url('assets/images/home-slideibar=Slide Two');"></div>
+				<div class="carousel-caption">
+					<h2>Caption 2</h2>
+				</div>
+			</div>
+			<div class="item">
+				<div class="fill" style="background-image:url('assets/images/home-slideibar=Slide Three');"></div>
+				<div class="carousel-caption">
+					<h2>Caption 3</h2>
+				</div>
+			</div>
+		</div>
 
-312-738-2427 | 925 w Chicago Ave
+		<!-- Controls -->
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			<span class="icon-prev"></span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">
+			<span class="icon-next"></span>
+		</a>
+	</header>
 
-</ul>
+	<center>
+		<h2>Proline home page</h2>
+	</center>
 
-<ul>
-	slider images are in : assets/images/home-slideibar
-</ul>
-<hr />
-<ul>
-	<li>img name : small_indoor_golf_2</li>
-	<li>title : CHICAGO'S HOME FOR INDOOR GOLF</li>
-	<li>content : Proline Golf offers a full service golf shop, indoor golf simulators, PGA golf lessons, and BYOB. Call 312-738-2427 for more information.</li>
-</ul>
+	<ul>
+		8,000 Sq. Ft. of Golf Right in the Heart of Chicago 312-738-2427 | 925 w Chicago Ave
 
-<ul>
-	<li>img name : small_Home13_Chicago_Golf_Lessons</li>
-	<li>title : RESERVE A SIMULATOR NOW!</li>
-	<li>content : Book a simulator for practice, indoor golf, or PGA lessons Right Now! CLICK BOOK NOW!</li>
-	<li><a href="https://booknow.appointment-plus.com/6r0crrgy/" target="_blank">Book Now</a></li>
-</ul>
+	</ul>
 
-<ul ng-repeat="article in articles track by $index">
-	<li>image name: {{article.imgnmae}}</li>
-	<li>Heading : {{article.heading}}</li>
-	<li>Content : {{article.content}}</li>
-	<li><a href="#!/{{article.pagelink}}"> Read more</a></li>
-</ul>
-	
+	<ul>
+		slider images are in : assets/images/home-slideibar
+	</ul>
+	<hr />
+	<ul>
+		<li>img name : small_indoor_golf_2</li>
+		<li>title : CHICAGO'S HOME FOR INDOOR GOLF</li>
+		<li>content : Proline Golf offers a full service golf shop, indoor golf simulators, PGA golf lessons, and BYOB. Call 312-738-2427 for more information.</li>
+	</ul>
+
+	<ul>
+		<li>img name : small_Home13_Chicago_Golf_Lessons</li>
+		<li>title : RESERVE A SIMULATOR NOW!</li>
+		<li>content : Book a simulator for practice, indoor golf, or PGA lessons Right Now! CLICK BOOK NOW!</li>
+		<li><a href="https://booknow.appointment-plus.com/6r0crrgy/" target="_blank">Book Now</a>
+		</li>
+	</ul>
+
+	<ul ng-repeat="article in articles track by $index">
+		<li>image name: {{article.imgnmae}}</li>
+		<li>Heading : {{article.heading}}</li>
+		<li>Content : {{article.content}}</li>
+		<li><a href="#!/{{article.pagelink}}"> Read more</a>
+		</li>
+	</ul>
+
 </div>
