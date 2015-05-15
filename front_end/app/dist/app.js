@@ -9,7 +9,7 @@ angular.module('prolineApp', [
 		'prolineApp.club-fitting',
 		'prolineApp.club-repair',
 		'prolineApp.contact',
-		'prolineApp.corporate-sales',
+		'prolineApp.custom-products',
 		'prolineApp.instruction',
 		'prolineApp.product'
 	]);
@@ -189,19 +189,19 @@ angular.module('prolineApp').controller('contactController', function ($scope, $
 		var authFactory = {};
 
 		return authFactory;
-	}]);;angular.module('prolineApp.corporate-sales', []);
+	}]);;angular.module('prolineApp.custom-products', []);
 
-angular.module('prolineApp.corporate-sales').config(['$routeProvider', function($routeProvider) {
+angular.module('prolineApp.custom-products').config(['$routeProvider', function($routeProvider) {
 				
 		$routeProvider
 			.when("/corporate-sales", {
-				controller: 'corporate-salesController',
-				templateUrl: 'modules/corporate-sales/view.html',
+				controller: 'custom-productsController',
+				templateUrl: 'modules/custom-products/view.html',
 			});
 	}
 ]);
 
-angular.module('prolineApp').controller('corporate-salesController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
+angular.module('prolineApp').controller('custom-productsController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
 	
 	$scope.pagename = "corporate-sales";
 });;angular.module('prolineApp.custom-products').factory('custom-productsFactory', ['$http', function ($http) {

@@ -9,7 +9,7 @@ angular.module('prolineApp', [
 		'prolineApp.club-fitting',
 		'prolineApp.club-repair',
 		'prolineApp.contact',
-		'prolineApp.corporate-sales',
+		'prolineApp.custom-products',
 		'prolineApp.instruction',
 		'prolineApp.product'
 	]);
