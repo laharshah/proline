@@ -2,7 +2,7 @@
  * Controller for view tables page
  */
 
-angular.module('prolineApp.product',['slick']);
+angular.module('prolineApp.product',[]);
 
 angular.module('prolineApp.product').config(['$routeProvider', function($routeProvider) {
 				

@@ -4,6 +4,7 @@ angular.module('prolineApp', [
 		'ngCookies',
 		'ui.bootstrap',
 		'xeditable',
+		'slick',
 		'prolineApp.auth',
 		'prolineApp.welcome',
 		'prolineApp.club-fitting',
@@ -12,6 +13,7 @@ angular.module('prolineApp', [
 		'prolineApp.custom-products',
 		'prolineApp.instruction',
 		'prolineApp.product'
+		
 	]);
 
 angular.module('prolineApp').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -313,7 +315,7 @@ angular.module('prolineApp').controller('instructionController', function ($scop
 		var authFactory = {};
 
 		return authFactory;
-	}]);;angular.module('prolineApp.product',['slick']);
+	}]);;angular.module('prolineApp.product',[]);
 
 angular.module('prolineApp.product').config(['$routeProvider', function($routeProvider) {
 				
