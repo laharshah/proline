@@ -241,7 +241,8 @@ angular.module('prolineApp').controller('custom-productsController', function ($
     }, {
         image: 'https://proline-laharshah.c9.io/front_end/app/assets/images/home-slideibar/very_large_1.jpg'
     }];
-});;;angular.module('prolineApp.instruction', []);
+});
+;;angular.module('prolineApp.instruction', []);
 
 angular.module('prolineApp.instruction').config(['$routeProvider', function($routeProvider) {
 				
