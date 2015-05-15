@@ -20,6 +20,8 @@ angular.module('prolineApp').controller('homeController', function($scope, $loca
         pagelink: 'club-fitting'
     }];
 })
+
+
 angular.module('prolineApp').controller('carouselController', function($scope) {
     $scope.myInterval = 3000;
     $scope.slides = [{
