@@ -16,6 +16,8 @@ angular.module('prolineApp', [
 		
 	]);
 
+
+
 angular.module('prolineApp').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	
 	$locationProvider.hashPrefix('!');
@@ -34,17 +36,19 @@ angular.module('prolineApp').run(function(editableOptions){
 
 angular.module('prolineApp').controller('rootController', ['$rootScope', function($rootScope){
 	$rootScope.bodyClass = 'login-page';
-}]);
-
-angular.module('prolineApp').controller('rootController', function ($scope, $window, $cookieStore, $rootScope, $location, $route, authFactory) {
+}]);;;angular.module('prolineApp').controller('rootController', function ($scope, $window, $cookieStore, $rootScope, $location, $route, authFactory) {
 	
 	$rootScope.title = "Chicagoland's Premier Golf Shop & Club Fitter | Proline Golf Chicago";
 	
 	$scope.user = {};
+	
+	$scope.isCollapsed = false;
+	
+	
 
 });
 
-angular.module('prolineApp.auth', []);
+;angular.module('prolineApp.auth', []);
 
 angular.module('prolineApp.auth').config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
 		
@@ -98,8 +102,7 @@ angular.module('prolineApp.auth').controller('authController', function ($scope,
 	};
 
 	
-});
-angular.module('prolineApp.auth').factory('authFactory', ['$http', function ($http) {
+});;angular.module('prolineApp.auth').factory('authFactory', ['$http', function ($http) {
 		
 		/**
 		 * Blank authFactory
@@ -122,29 +125,27 @@ angular.module('prolineApp.auth').factory('authFactory', ['$http', function ($ht
 		};
 
 		return authFactory;
-	}]);;angular.module('prolineApp.club-fitting', []);
+	}]);;angular.module('prolineApp.ClubFitting', []);
 
-angular.module('prolineApp.club-fitting').config(['$routeProvider', function($routeProvider) {
+angular.module('prolineApp.ClubFitting').config(['$routeProvider', function($routeProvider) {
 				
 		$routeProvider
 			.when("/club-fitting", {
-				controller: 'club-fittingController',
+				controller: 'ClubFittingController',
 				templateUrl: 'modules/club-fitting/view.html',
 			});
 	}
 ]);
 
-angular.module('prolineApp').controller('club-fittingController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
+angular.module('prolineApp').controller('ClubFittingController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
 	
 	$scope.pagename = "club-fitting";
-	$scope.heading=[
-		"Mizuno Shaft Optimizer",
-		"Ping nFlight",
-		"Flight Scope"
-	];
-});
-
-angular.module('prolineApp.club-fitting').factory('club-fittingFactory', ['$http', function ($http) {
+	$scope.infolist=[
+			{"heading":"Mizuno Shaft Optimizer", "contents":"this is details","leave":"button"},
+			{"heading":"Ping nFlight", "contents":"this is details","leave":"button"},
+			{"heading":"Flight Scope", "contents":"this is details","leave":"button"}
+		];
+});;angular.module('prolineApp.club-fitting').factory('club-fittingFactory', ['$http', function ($http) {
 		
 		/**
 		 * Blank authFactory
@@ -153,31 +154,32 @@ angular.module('prolineApp.club-fitting').factory('club-fittingFactory', ['$http
 		var authFactory = {};
 
 		return authFactory;
-	}]);
+	}]);;angular.module('prolineApp.ClubRepair', []);
 
-angular.module('prolineApp.club-repair', []);
-
-angular.module('prolineApp.club-repair').config(['$routeProvider', function($routeProvider) {
+angular.module('prolineApp.ClubRepair').config(['$routeProvider', function($routeProvider) {
 				
 		$routeProvider
 			.when("/club-repair", {
-				controller: 'club-repairController',
+				controller: 'ClubRepairController',
 				templateUrl: 'modules/club-repair/view.html',
 			});
 	}
 ]);
 
-angular.module('prolineApp').controller('club-repairController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
+angular.module('prolineApp').controller('ClubRepairController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
 	
 	$scope.pagename = "club-repair";
 	$scope.packages = [
 		{
 		feature1name:"one",feature2name:"two",feature3name:"three",feature4name:"four",feature1name:"one",
 		feature1content:"one",feature2content:"two",feature3content:"three",feature4content:"four"
-		}
-	];
-});
-angular.module('prolineApp.club-repair').factory('club-repairFactory', ['$http', function ($http) {
+			
+			
+		},
+		{	},
+		{	}
+	]
+});;angular.module('prolineApp.club-repair').factory('club-repairFactory', ['$http', function ($http) {
 		
 		/**
 		 * Blank authFactory
@@ -186,9 +188,7 @@ angular.module('prolineApp.club-repair').factory('club-repairFactory', ['$http',
 		var authFactory = {};
 
 		return authFactory;
-	}]);
-
-angular.module('prolineApp.contact', []);
+	}]);;angular.module('prolineApp.contact', []);
 
 angular.module('prolineApp.contact').config(['$routeProvider', function($routeProvider) {
 				
@@ -261,9 +261,9 @@ angular.module('prolineApp').controller('custom-productsController', function ($
 angular.module('prolineApp').controller('carouselController', function($scope) {
     $scope.myInterval = 3000;
     $scope.slides = [{
-        image: 'https://proline-laharshah.c9.io/front_end/app/assets/images/home-slideibar/very_large_1.jpg'
+        image: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/39/image/very_large_twitter_proline.jpg'
     }, {
-        image: 'https://proline-laharshah.c9.io/front_end/app/assets/images/home-slideibar/very_large_2.jpg'
+        image: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/39/image/very_large_twitter_proline.jpg'
     }, {
         image: 'https://proline-laharshah.c9.io/front_end/app/assets/images/home-slideibar/very_large_clubs.JPG'
     }, {

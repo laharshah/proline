@@ -16,6 +16,8 @@ angular.module('prolineApp', [
 		
 	]);
 
+
+
 angular.module('prolineApp').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	
 	$locationProvider.hashPrefix('!');
