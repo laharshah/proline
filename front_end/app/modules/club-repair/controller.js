@@ -2,19 +2,19 @@
  * Controller for view tables page
  */
 
-angular.module('prolineApp.club-repair', []);
+angular.module('prolineApp.ClubRepair', []);
 
-angular.module('prolineApp.club-repair').config(['$routeProvider', function($routeProvider) {
+angular.module('prolineApp.ClubRepair').config(['$routeProvider', function($routeProvider) {
 				
 		$routeProvider
 			.when("/club-repair", {
-				controller: 'club-repairController',
+				controller: 'ClubRepairController',
 				templateUrl: 'modules/club-repair/view.html',
 			});
 	}
 ]);
 
-angular.module('prolineApp').controller('club-repairController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
+angular.module('prolineApp').controller('ClubRepairController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
 	
 	$scope.pagename = "club-repair";
 	$scope.packages = [

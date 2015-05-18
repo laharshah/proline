@@ -34,7 +34,9 @@ angular.module('prolineApp').run(function(editableOptions){
 
 angular.module('prolineApp').controller('rootController', ['$rootScope', function($rootScope){
 	$rootScope.bodyClass = 'login-page';
-}]);;;angular.module('prolineApp').controller('rootController', function ($scope, $window, $cookieStore, $rootScope, $location, $route, authFactory) {
+}]);
+
+angular.module('prolineApp').controller('rootController', function ($scope, $window, $cookieStore, $rootScope, $location, $route, authFactory) {
 	
 	$rootScope.title = "Chicagoland's Premier Golf Shop & Club Fitter | Proline Golf Chicago";
 	
@@ -42,7 +44,7 @@ angular.module('prolineApp').controller('rootController', ['$rootScope', functio
 
 });
 
-;angular.module('prolineApp.auth', []);
+angular.module('prolineApp.auth', []);
 
 angular.module('prolineApp.auth').config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
 		
@@ -96,7 +98,8 @@ angular.module('prolineApp.auth').controller('authController', function ($scope,
 	};
 
 	
-});;angular.module('prolineApp.auth').factory('authFactory', ['$http', function ($http) {
+});
+angular.module('prolineApp.auth').factory('authFactory', ['$http', function ($http) {
 		
 		/**
 		 * Blank authFactory
@@ -134,12 +137,14 @@ angular.module('prolineApp.club-fitting').config(['$routeProvider', function($ro
 angular.module('prolineApp').controller('club-fittingController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
 	
 	$scope.pagename = "club-fitting";
-	$scope.heading=[{
+	$scope.heading=[
 		"Mizuno Shaft Optimizer",
 		"Ping nFlight",
 		"Flight Scope"
-	}]
-});;angular.module('prolineApp.club-fitting').factory('club-fittingFactory', ['$http', function ($http) {
+	];
+});
+
+angular.module('prolineApp.club-fitting').factory('club-fittingFactory', ['$http', function ($http) {
 		
 		/**
 		 * Blank authFactory
@@ -148,7 +153,9 @@ angular.module('prolineApp').controller('club-fittingController', function ($sco
 		var authFactory = {};
 
 		return authFactory;
-	}]);;angular.module('prolineApp.club-repair', []);
+	}]);
+
+angular.module('prolineApp.club-repair', []);
 
 angular.module('prolineApp.club-repair').config(['$routeProvider', function($routeProvider) {
 				
@@ -167,13 +174,10 @@ angular.module('prolineApp').controller('club-repairController', function ($scop
 		{
 		feature1name:"one",feature2name:"two",feature3name:"three",feature4name:"four",feature1name:"one",
 		feature1content:"one",feature2content:"two",feature3content:"three",feature4content:"four"
-			
-			
-		},
-		{	},
-		{	}
-	]
-});;angular.module('prolineApp.club-repair').factory('club-repairFactory', ['$http', function ($http) {
+		}
+	];
+});
+angular.module('prolineApp.club-repair').factory('club-repairFactory', ['$http', function ($http) {
 		
 		/**
 		 * Blank authFactory
@@ -182,7 +186,9 @@ angular.module('prolineApp').controller('club-repairController', function ($scop
 		var authFactory = {};
 
 		return authFactory;
-	}]);;angular.module('prolineApp.contact', []);
+	}]);
+
+angular.module('prolineApp.contact', []);
 
 angular.module('prolineApp.contact').config(['$routeProvider', function($routeProvider) {
 				

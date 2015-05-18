@@ -6,6 +6,10 @@ angular.module('prolineApp').controller('rootController', function ($scope, $win
 	$rootScope.title = "Chicagoland's Premier Golf Shop & Club Fitter | Proline Golf Chicago";
 	
 	$scope.user = {};
+	
+	$scope.isCollapsed = false;
+	
+	
 
 });
 

@@ -25,9 +25,9 @@ angular.module('prolineApp').controller('homeController', function($scope, $loca
 angular.module('prolineApp').controller('carouselController', function($scope) {
     $scope.myInterval = 3000;
     $scope.slides = [{
-        image: 'https://proline-laharshah.c9.io/front_end/app/assets/images/home-slideibar/very_large_1.jpg'
+        image: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/39/image/very_large_twitter_proline.jpg'
     }, {
-        image: 'https://proline-laharshah.c9.io/front_end/app/assets/images/home-slideibar/very_large_2.jpg'
+        image: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/39/image/very_large_twitter_proline.jpg'
     }, {
         image: 'https://proline-laharshah.c9.io/front_end/app/assets/images/home-slideibar/very_large_clubs.JPG'
     }, {
