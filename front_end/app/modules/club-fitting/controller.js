@@ -2,19 +2,19 @@
  * Controller for view tables page
  */
 
-angular.module('prolineApp.ClubFitting', []);
+angular.module('prolineApp.club-fitting', []);
 
-angular.module('prolineApp.ClubFitting').config(['$routeProvider', function($routeProvider) {
+angular.module('prolineApp.club-fitting').config(['$routeProvider', function($routeProvider) {
 				
 		$routeProvider
 			.when("/club-fitting", {
-				controller: 'ClubFittingController',
+				controller: 'club-fittingController',
 				templateUrl: 'modules/club-fitting/view.html',
 			});
 	}
 ]);
 
-angular.module('prolineApp').controller('ClubFittingController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
+angular.module('prolineApp').controller('club-fittingController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
 	
 	$scope.pagename = "club-fitting";
 	$scope.infolist=[
