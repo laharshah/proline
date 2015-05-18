@@ -19,6 +19,8 @@ angular.module('prolineApp').controller('homeController', function($scope, $loca
         imgname: 'small_65976_340786959371741_1214184585_n',
         pagelink: 'club-fitting'
     }];
+    
+    $scope.companydescription = "Proline Golf offers a full service golf shop, indoor golf simulators, PGA golf lessons, and BYOB. Call 312-738-2427 for more information.";
 })
 
 
