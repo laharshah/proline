@@ -7,7 +7,7 @@ angular.module('prolineApp', [
 		'slick',
 		'prolineApp.auth',
 		'prolineApp.welcome',
-		'prolineApp.club-fitting',
+		'prolineApp.ClubFitting',
 		'prolineApp.club-repair',
 		'prolineApp.contact',
 		'prolineApp.custom-products',
