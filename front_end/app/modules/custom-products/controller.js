@@ -2,19 +2,19 @@
  * Controller for view tables page
  */
 
-angular.module('prolineApp.custom-products', []);
+angular.module('prolineApp.CustomProducts', []);
 
-angular.module('prolineApp.custom-products').config(['$routeProvider', function($routeProvider) {
+angular.module('prolineApp.CustomProducts').config(['$routeProvider', function($routeProvider) {
 				
 		$routeProvider
 			.when("/corporate-sales", {
-				controller: 'custom-productsController',
+				controller: 'CustomProductsController',
 				templateUrl: 'modules/custom-products/view.html',
 			});
 	}
 ]);
 
-angular.module('prolineApp').controller('custom-productsController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
+angular.module('prolineApp').controller('CustomProductsController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
 	
 	$scope.pagename = "corporate-sales";
 });

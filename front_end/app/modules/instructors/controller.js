@@ -2,20 +2,20 @@
  * Controller for view tables page
  */
 
-angular.module('prolineApp.instruction', []);
+angular.module('prolineApp.instructors', []);
 
-angular.module('prolineApp.instruction').config(['$routeProvider', function($routeProvider) {
+angular.module('prolineApp.instructors').config(['$routeProvider', function($routeProvider) {
 				
 		$routeProvider
-			.when("/instruction", {
-				controller: 'instructionController',
-				templateUrl: 'modules/instruction/view.html',
+			.when("/instructors", {
+				controller: 'InstructorsController',
+				templateUrl: 'modules/instructors/view.html',
 			});
 	}
 ]);
 
-angular.module('prolineApp').controller('instructionController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
-	$scope.pagename = "instruction";
+angular.module('prolineApp').controller('InstructorsController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
+	$scope.pagename = "instructors";
 
 	$scope.instructors = [
   						{

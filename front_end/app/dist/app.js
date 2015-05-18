@@ -5,19 +5,17 @@ angular.module('prolineApp', [
 		'ui.bootstrap',
 		'xeditable',
 		'slick',
+		'ap.lateralSlideMenu',
 		'prolineApp.auth',
 		'prolineApp.welcome',
 		'prolineApp.ClubFitting',
 		'prolineApp.ClubRepair',
 		'prolineApp.contact',
-		'prolineApp.custom-products',
-		'prolineApp.instruction',
+		'prolineApp.CustomProducts',
+		'prolineApp.instructors',
 		'prolineApp.product'
 		
 	]);
-
-
-
 angular.module('prolineApp').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	
 	$locationProvider.hashPrefix('!');
@@ -36,7 +34,17 @@ angular.module('prolineApp').run(function(editableOptions){
 
 angular.module('prolineApp').controller('rootController', ['$rootScope', function($rootScope){
 	$rootScope.bodyClass = 'login-page';
-}]);;;angular.module('prolineApp').controller('rootController', function ($scope, $window, $cookieStore, $rootScope, $location, $route, authFactory) {
+}]);;// angular.module('prolineApp').directive('lateralSlideMenuToggle', function () {
+// 	return {
+// 		restrict: 'C',
+// 		link: function(scope, elm) {
+// 			$(elm).click(function() {
+// 				return $('body, html').toggleClass("toggle-menu");
+// 	        });
+// 		}
+// 	}	
+// });
+;angular.module('prolineApp').controller('rootController', function ($scope, $window, $cookieStore, $rootScope, $location, $route, authFactory) {
 	
 	$rootScope.title = "Chicagoland's Premier Golf Shop & Club Fitter | Proline Golf Chicago";
 	
@@ -44,40 +52,14 @@ angular.module('prolineApp').controller('rootController', ['$rootScope', functio
 	
 	$scope.isCollapsed = false;
 	
-	
+$scope.isActive = function(route){
+    return route === $location.path();
+  }	
+
 
 });
 
-;angular.module('prolineApp.ClubFitting', []);
-
-angular.module('prolineApp.ClubFitting').config(['$routeProvider', function($routeProvider) {
-				
-		$routeProvider
-			.when("/club-fitting", {
-				controller: 'ClubFittingController',
-				templateUrl: 'modules/ClubFitting/view.html',
-			});
-	}
-]);
-
-angular.module('prolineApp').controller('ClubFittingController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
-	
-	$scope.pagename = "club-fitting";
-	$scope.infolist=[
-			{"heading":"Mizuno Shaft Optimizer", "contents":"this is details","leave":"button"},
-			{"heading":"Ping nFlight", "contents":"this is details","leave":"button"},
-			{"heading":"Flight Scope", "contents":"this is details","leave":"button"}
-		];
-});;angular.module('prolineApp.ClubFitting').factory('club-fittingFactory', ['$http', function ($http) {
-		
-		/**
-		 * Blank authFactory
-		 * @type {Object}
-		 */
-		var authFactory = {};
-
-		return authFactory;
-	}]);;angular.module('prolineApp.auth', []);
+;angular.module('prolineApp.auth', []);
 
 angular.module('prolineApp.auth').config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
 		
@@ -155,6 +137,35 @@ angular.module('prolineApp.auth').controller('authController', function ($scope,
 		};
 
 		return authFactory;
+	}]);;angular.module('prolineApp.ClubFitting', []);
+
+angular.module('prolineApp.ClubFitting').config(['$routeProvider', function($routeProvider) {
+				
+		$routeProvider
+			.when("/club-fitting", {
+				controller: 'ClubFittingController',
+				templateUrl: 'modules/club-fitting/view.html',
+			});
+	}
+]);
+
+angular.module('prolineApp').controller('ClubFittingController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
+	
+	$scope.pagename = "club-fitting";
+	$scope.infolist=[
+			{"heading":"Mizuno Shaft Optimizer", "contents":"this is details","leave":"button"},
+			{"heading":"Ping nFlight", "contents":"this is details","leave":"button"},
+			{"heading":"Flight Scope", "contents":"this is details","leave":"button"}
+		];
+});;angular.module('prolineApp.ClubFitting').factory('club-fittingFactory', ['$http', function ($http) {
+		
+		/**
+		 * Blank authFactory
+		 * @type {Object}
+		 */
+		var authFactory = {};
+
+		return authFactory;
 	}]);;angular.module('prolineApp.ClubRepair', []);
 
 angular.module('prolineApp.ClubRepair').config(['$routeProvider', function($routeProvider) {
@@ -214,22 +225,22 @@ angular.module('prolineApp').controller('contactController', function ($scope, $
 		var authFactory = {};
 
 		return authFactory;
-	}]);;angular.module('prolineApp.custom-products', []);
+	}]);;angular.module('prolineApp.CustomProducts', []);
 
-angular.module('prolineApp.custom-products').config(['$routeProvider', function($routeProvider) {
+angular.module('prolineApp.CustomProducts').config(['$routeProvider', function($routeProvider) {
 				
 		$routeProvider
 			.when("/corporate-sales", {
-				controller: 'custom-productsController',
+				controller: 'CustomProductsController',
 				templateUrl: 'modules/custom-products/view.html',
 			});
 	}
 ]);
 
-angular.module('prolineApp').controller('custom-productsController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
+angular.module('prolineApp').controller('CustomProductsController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
 	
 	$scope.pagename = "corporate-sales";
-});;angular.module('prolineApp.custom-products').factory('custom-productsFactory', ['$http', function ($http) {
+});;angular.module('prolineApp.CustomProducts').factory('CustomProductsFactory', ['$http', function ($http) {
 		
 		/**
 		 * Blank authFactory
@@ -270,20 +281,20 @@ angular.module('prolineApp').controller('carouselController', function($scope) {
     }, {
         image: 'https://proline-laharshah.c9.io/front_end/app/assets/images/home-slideibar/very_large_1.jpg'
     }];
-});;;angular.module('prolineApp.instruction', []);
+});;;angular.module('prolineApp.instructors', []);
 
-angular.module('prolineApp.instruction').config(['$routeProvider', function($routeProvider) {
+angular.module('prolineApp.instructors').config(['$routeProvider', function($routeProvider) {
 				
 		$routeProvider
-			.when("/instruction", {
-				controller: 'instructionController',
-				templateUrl: 'modules/instruction/view.html',
+			.when("/instructors", {
+				controller: 'InstructorsController',
+				templateUrl: 'modules/instructors/view.html',
 			});
 	}
 ]);
 
-angular.module('prolineApp').controller('instructionController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
-	$scope.pagename = "instruction";
+angular.module('prolineApp').controller('InstructorsController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
+	$scope.pagename = "instructors";
 
 	$scope.instructors = [
   						{
@@ -328,7 +339,7 @@ angular.module('prolineApp').controller('instructionController', function ($scop
   						
               }];
 
-});;angular.module('prolineApp.instruction').factory('instructionFactory', ['$http', function ($http) {
+});;angular.module('prolineApp.instructors').factory('instructionFactory', ['$http', function ($http) {
 		
 		/**
 		 * Blank authFactory

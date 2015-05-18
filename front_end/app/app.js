@@ -5,19 +5,17 @@ angular.module('prolineApp', [
 		'ui.bootstrap',
 		'xeditable',
 		'slick',
+		'ap.lateralSlideMenu',
 		'prolineApp.auth',
 		'prolineApp.welcome',
 		'prolineApp.ClubFitting',
 		'prolineApp.ClubRepair',
 		'prolineApp.contact',
-		'prolineApp.custom-products',
-		'prolineApp.instruction',
+		'prolineApp.CustomProducts',
+		'prolineApp.instructors',
 		'prolineApp.product'
 		
 	]);
-
-
-
 angular.module('prolineApp').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	
 	$locationProvider.hashPrefix('!');

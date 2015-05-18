@@ -1,5 +1,25 @@
-<div collapse="isCollapsed">
-<div id="sidebar-wrapper">
+<!DOCTYPE html>
+       
+    <!-- <body ng-app="myApp" lateral-slide-menu-controller >
+ -->
+          <!-- MENU -->
+
+          
+          
+          <!-- main page -->
+          <div class="main-page lateral-slide-menu-main-page">
+            <a href="#!/" class="toggle-menu" lateral-slide-menu-toggle></a>
+          </div>
+
+
+        <!-- script -->
+
+
+
+<lateral-slide-menu ng-cloak>
+
+
+        <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <div>
@@ -8,24 +28,24 @@
                     </a>
                     </div>
                 </li>
-                
+              
                 <li>
-                    <a href="#!/home"> Home</a>
+                    <a ng-href="#!/home" ng-class="{active:isActive('/home')}"> Home</a>
 				</li>
                 <li>
-                    <a href="#!/instruction"> Instructors</a>
+                    <a ng-href="#!/instructors" ng-class="{active:isActive('/instructors')}"> Instructors</a>
                 </li>
                 <li>
-                	<a href="#!/club-fitting"> Club Fitting</a>
+                	<a ng-href="#!/club-fitting" ng-class="{active:isActive('/club-fitting')}"> Club Fitting</a>
                 </li>
                 <li>
-                	<a href="#!/club-repair"> Club Repair</a>
+                	<a ng-href="#!/club-repair" ng-class="{active:isActive('/club-repair')}"> Club Repair</a>
                 </li>
                 <li>
-                	<a href="#!/corporate-sales"> Custom Products</a>
+                	<a ng-href="#!/custom-products" ng-class="{active:isActive('/custom-products')}"> Custom Products</a>
                 </li>
                 <li>
-                	<a href="#!/contact"> Contact</a>
+                	<a ng-href="#!/contact" ng-class="{active:isActive('/contact')}"> Contact</a>
                 </li>                
                 <!--<li>-->
                 <!--    <pre>-->
@@ -47,51 +67,7 @@
                 <!--    </pre>-->
                 <!--</li>-->
             </ul>
-</div>
+        </div> 
 
 
-<!-- <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
- -->            <!-- Brand and toggle get grouped for better mobile display -->
-<!--             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#!/">
-                    <img src="http://prolinechicago.com/sites/proline-golf/images/logo.png" alt="">
-                </a>
-            </div>
- -->            <!-- Collect the nav links, forms, and other content for toggling -->
-<!--             <div style="padding-top:30px" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#!/product"> Product | </a>
-					</li>
-                    <li>
-                        <a href="#!/instruction"> Instruction | </a>
-                    </li>
-                    <li>
-                    	<a href="#!/club-fitting"> Club Fitting | </a>
-                    </li>
-                    <li>
-                    	<a href="#!/club-repair"> Club Repair | </a>
-                    </li>
-                    <li>
-                    	<a href="#!/corporate-sales"> Corporate Sales  |</a>
-                    </li>
-                    <li>
-                    	<a href="#!/contact"> Contact</a>
-                    </li>	
-                </ul>
-            </div>
- -->            <!-- /.navbar-collapse -->
-<!--         </div>
- -->        <!-- /.container -->
-<!--     </nav>
-<hr />
- -->
- 
- </div>
+</lateral-slide-menu>

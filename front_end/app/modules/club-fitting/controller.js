@@ -9,7 +9,7 @@ angular.module('prolineApp.ClubFitting').config(['$routeProvider', function($rou
 		$routeProvider
 			.when("/club-fitting", {
 				controller: 'ClubFittingController',
-				templateUrl: 'modules/ClubFitting/view.html',
+				templateUrl: 'modules/club-fitting/view.html',
 			});
 	}
 ]);

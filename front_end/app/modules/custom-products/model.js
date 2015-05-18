@@ -2,7 +2,7 @@
  * Initializing the database model for login controller
  * @type [angular module]
  */
-	angular.module('prolineApp.custom-products').factory('custom-productsFactory', ['$http', function ($http) {
+	angular.module('prolineApp.CustomProducts').factory('CustomProductsFactory', ['$http', function ($http) {
 		
 		/**
 		 * Blank authFactory

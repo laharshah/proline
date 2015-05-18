@@ -9,7 +9,10 @@ angular.module('prolineApp').controller('rootController', function ($scope, $win
 	
 	$scope.isCollapsed = false;
 	
-	
+$scope.isActive = function(route){
+    return route === $location.path();
+  }	
+
 
 });
 
