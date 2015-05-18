@@ -45,8 +45,8 @@ angular.module('prolineApp').controller('InstructorsController', function ($scop
   							facebook:false,
   							twitter: false,
   							linkedin:'https://www.linkedin.com/pub/scott-thomas/12/215/185',
-  							imgpth:'https://fabrica-production.s3.amazonaws.com/proline-golf/item/102/image/large_thumb_gaberios.JPG',
-                inid:'in3'
+  							imgpath:'https://fabrica-production.s3.amazonaws.com/proline-golf/item/102/image/large_thumb_gaberios.JPG',
+                			inid:'in3'
   						},
   						{
   							name:'Scott Hogan',
