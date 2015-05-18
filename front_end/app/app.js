@@ -8,7 +8,7 @@ angular.module('prolineApp', [
 		'prolineApp.auth',
 		'prolineApp.welcome',
 		'prolineApp.ClubFitting',
-		'prolineApp.club-repair',
+		'prolineApp.ClubRepair',
 		'prolineApp.contact',
 		'prolineApp.custom-products',
 		'prolineApp.instruction',

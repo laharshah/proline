@@ -14,6 +14,7 @@ angular.module('prolineApp.welcome').config(['$routeProvider', function($routePr
 	}
 ]);
 
+
 angular.module('prolineApp').controller('welcomeController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
 	
 	$scope.pagename = "Welcome";

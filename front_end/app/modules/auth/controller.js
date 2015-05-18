@@ -20,6 +20,7 @@ angular.module('prolineApp.auth').config(['$routeProvider', '$httpProvider', fun
 	}
 ]);
 
+
 /**
  * Controller for login page
  */            	 	

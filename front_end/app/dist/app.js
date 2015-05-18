@@ -7,8 +7,8 @@ angular.module('prolineApp', [
 		'slick',
 		'prolineApp.auth',
 		'prolineApp.welcome',
-		'prolineApp.club-fitting',
-		'prolineApp.club-repair',
+		'prolineApp.ClubFitting',
+		'prolineApp.ClubRepair',
 		'prolineApp.contact',
 		'prolineApp.custom-products',
 		'prolineApp.instruction',
@@ -48,7 +48,36 @@ angular.module('prolineApp').controller('rootController', ['$rootScope', functio
 
 });
 
-;angular.module('prolineApp.auth', []);
+;angular.module('prolineApp.ClubFitting', []);
+
+angular.module('prolineApp.ClubFitting').config(['$routeProvider', function($routeProvider) {
+				
+		$routeProvider
+			.when("/club-fitting", {
+				controller: 'ClubFittingController',
+				templateUrl: 'modules/ClubFitting/view.html',
+			});
+	}
+]);
+
+angular.module('prolineApp').controller('ClubFittingController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
+	
+	$scope.pagename = "club-fitting";
+	$scope.infolist=[
+			{"heading":"Mizuno Shaft Optimizer", "contents":"this is details","leave":"button"},
+			{"heading":"Ping nFlight", "contents":"this is details","leave":"button"},
+			{"heading":"Flight Scope", "contents":"this is details","leave":"button"}
+		];
+});;angular.module('prolineApp.ClubFitting').factory('club-fittingFactory', ['$http', function ($http) {
+		
+		/**
+		 * Blank authFactory
+		 * @type {Object}
+		 */
+		var authFactory = {};
+
+		return authFactory;
+	}]);;angular.module('prolineApp.auth', []);
 
 angular.module('prolineApp.auth').config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
 		
@@ -65,6 +94,7 @@ angular.module('prolineApp.auth').config(['$routeProvider', '$httpProvider', fun
 			});
 	}
 ]);
+
 
 /**
  * Controller for login page
@@ -125,35 +155,6 @@ angular.module('prolineApp.auth').controller('authController', function ($scope,
 		};
 
 		return authFactory;
-	}]);;angular.module('prolineApp.ClubFitting', []);
-
-angular.module('prolineApp.ClubFitting').config(['$routeProvider', function($routeProvider) {
-				
-		$routeProvider
-			.when("/club-fitting", {
-				controller: 'ClubFittingController',
-				templateUrl: 'modules/club-fitting/view.html',
-			});
-	}
-]);
-
-angular.module('prolineApp').controller('ClubFittingController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
-	
-	$scope.pagename = "club-fitting";
-	$scope.infolist=[
-			{"heading":"Mizuno Shaft Optimizer", "contents":"this is details","leave":"button"},
-			{"heading":"Ping nFlight", "contents":"this is details","leave":"button"},
-			{"heading":"Flight Scope", "contents":"this is details","leave":"button"}
-		];
-});;angular.module('prolineApp.club-fitting').factory('club-fittingFactory', ['$http', function ($http) {
-		
-		/**
-		 * Blank authFactory
-		 * @type {Object}
-		 */
-		var authFactory = {};
-
-		return authFactory;
 	}]);;angular.module('prolineApp.ClubRepair', []);
 
 angular.module('prolineApp.ClubRepair').config(['$routeProvider', function($routeProvider) {
@@ -179,7 +180,7 @@ angular.module('prolineApp').controller('ClubRepairController', function ($scope
 		{	},
 		{	}
 	]
-});;angular.module('prolineApp.club-repair').factory('club-repairFactory', ['$http', function ($http) {
+});;angular.module('prolineApp.ClubRepair').factory('club-repairFactory', ['$http', function ($http) {
 		
 		/**
 		 * Blank authFactory
@@ -372,6 +373,7 @@ angular.module('prolineApp.welcome').config(['$routeProvider', function($routePr
 			});
 	}
 ]);
+
 
 angular.module('prolineApp').controller('welcomeController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
 	

@@ -4,7 +4,7 @@
 
 angular.module('prolineApp.ClubFitting', []);
 
-angular.module('prolineApp.club-fitting').config(['$routeProvider', function($routeProvider) {
+angular.module('prolineApp.ClubFitting').config(['$routeProvider', function($routeProvider) {
 				
 		$routeProvider
 			.when("/club-fitting", {
