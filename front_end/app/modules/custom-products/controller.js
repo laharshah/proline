@@ -27,7 +27,7 @@ angular.module('prolineApp').controller('CustomProductsController', function ($s
               			},
               			
               			{
-  							name:'Tournament Accessories',
+  							name:'Tournament',
   							about:'Details here of p2',
   							imgpath: 'https://proline-laharshah.c9.io/front_end/app/assets/images/custom-products/large_thumb_miniature-golf-bag-extralarge.jpg',
   						  	custom_p_id:'custom_p_2'
