@@ -16,6 +16,7 @@ angular.module('prolineApp', [
 		'prolineApp.product'
 		
 	]);
+
 angular.module('prolineApp').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	
 	$locationProvider.hashPrefix('!');
@@ -34,16 +35,16 @@ angular.module('prolineApp').run(function(editableOptions){
 
 angular.module('prolineApp').controller('rootController', ['$rootScope', function($rootScope){
 	$rootScope.bodyClass = 'login-page';
-}]);;// angular.module('prolineApp').directive('lateralSlideMenuToggle', function () {
-// 	return {
-// 		restrict: 'C',
-// 		link: function(scope, elm) {
-// 			$(elm).click(function() {
-// 				return $('body, html').toggleClass("toggle-menu");
-// 	        });
-// 		}
-// 	}	
-// });
+}]);;angular.module('prolineApp', []).directive('navToggle', function() {
+    return {
+        restrict: 'EA',
+        link: function(scope, element, attrs) {
+            element.bind('click', function() {
+                element.toggleClass(attrs.toggleClass);
+            });
+        }
+    };
+});
 ;angular.module('prolineApp').controller('rootController', function ($scope, $window, $cookieStore, $rootScope, $location, $route, authFactory) {
 	
 	$rootScope.title = "Chicagoland's Premier Golf Shop & Club Fitter | Proline Golf Chicago";
