@@ -1,4 +1,4 @@
-angular.module('prolineApp', []).directive('navToggle', function() {
+angular.module('prolineApp').directive('navToggle', function() {
     return {
         restrict: 'EA',
         link: function(scope, element, attrs) {

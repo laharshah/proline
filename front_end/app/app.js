@@ -16,6 +16,7 @@ angular.module('prolineApp', [
 		'prolineApp.product'
 		
 	]);
+
 angular.module('prolineApp').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	
 	$locationProvider.hashPrefix('!');
@@ -29,9 +30,5 @@ angular.module('prolineApp').config(['$routeProvider', '$locationProvider', func
 }]);
 
 angular.module('prolineApp').run(function(editableOptions){
-	editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
+	editableOptions.theme = 'bs3';
 });
-
-angular.module('prolineApp').controller('rootController', ['$rootScope', function($rootScope){
-	$rootScope.bodyClass = 'login-page';
-}]);
