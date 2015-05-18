@@ -1,10 +1,10 @@
-// angular.module('prolineApp').directive('lateralSlideMenuToggle', function () {
-// 	return {
-// 		restrict: 'C',
-// 		link: function(scope, elm) {
-// 			$(elm).click(function() {
-// 				return $('body, html').toggleClass("toggle-menu");
-// 	        });
-// 		}
-// 	}	
-// });
+angular.module('prolineApp', []).directive('navToggle', function() {
+    return {
+        restrict: 'EA',
+        link: function(scope, element, attrs) {
+            element.bind('click', function() {
+                element.toggleClass(attrs.toggleClass);
+            });
+        }
+    };
+});
