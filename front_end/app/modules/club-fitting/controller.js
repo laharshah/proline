@@ -22,5 +22,5 @@ angular.module('prolineApp').controller('ClubFittingController', function ($scop
 			{"heading":"Ping nFlight", "contents":"this is details","leave":"button"},
 			{"heading":"Flight Scope", "contents":"this is details","leave":"button"}
 		];
-	$scope.		
+	
 });

@@ -27,7 +27,6 @@ angular.module('prolineApp').config(['$routeProvider', '$locationProvider', func
 	.otherwise("/");
 
 }]);
-
 angular.module('prolineApp').run(function(editableOptions){
 	editableOptions.theme = 'bs3';
 });

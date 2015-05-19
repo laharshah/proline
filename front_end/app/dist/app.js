@@ -27,7 +27,6 @@ angular.module('prolineApp').config(['$routeProvider', '$locationProvider', func
 	.otherwise("/");
 
 }]);
-
 angular.module('prolineApp').run(function(editableOptions){
 	editableOptions.theme = 'bs3';
 });;angular.module('prolineApp').directive('navToggle', function() {
@@ -151,7 +150,8 @@ angular.module('prolineApp').controller('ClubFittingController', function ($scop
 			{"heading":"Ping nFlight", "contents":"this is details","leave":"button"},
 			{"heading":"Flight Scope", "contents":"this is details","leave":"button"}
 		];
-});;angular.module('prolineApp.ClubFitting').factory('club-fittingFactory', ['$http', function ($http) {
+	
+});;angular.module('prolineApp.ClubFitting').factory('ClubFittingFactory', ['$http', function ($http) {
 		
 		/**
 		 * Blank authFactory
@@ -351,8 +351,8 @@ angular.module('prolineApp').controller('InstructorsController', function ($scop
   							facebook:false,
   							twitter: false,
   							linkedin:'https://www.linkedin.com/pub/scott-thomas/12/215/185',
-  							imgpth:'https://fabrica-production.s3.amazonaws.com/proline-golf/item/102/image/large_thumb_gaberios.JPG',
-                inid:'in3'
+  							imgpath:'https://fabrica-production.s3.amazonaws.com/proline-golf/item/102/image/large_thumb_gaberios.JPG',
+                			inid:'in3'
   						},
   						{
   							name:'Scott Hogan',
