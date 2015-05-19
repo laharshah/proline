@@ -27,6 +27,7 @@ angular.module('prolineApp').config(['$routeProvider', '$locationProvider', func
 	.otherwise("/");
 
 }]);
+
 angular.module('prolineApp').run(function(editableOptions){
 	editableOptions.theme = 'bs3';
 });;angular.module('prolineApp').directive('navToggle', function() {
@@ -243,7 +244,7 @@ angular.module('prolineApp').controller('CustomProductsController', function ($s
               			},
               			
               			{
-  							name:'Tournament Accessories',
+  							name:'Tournament',
   							about:'Details here of p2',
   							imgpath: 'https://proline-laharshah.c9.io/front_end/app/assets/images/custom-products/large_thumb_miniature-golf-bag-extralarge.jpg',
   						  	custom_p_id:'custom_p_2'
@@ -350,7 +351,7 @@ angular.module('prolineApp').controller('InstructorsController', function ($scop
   							facebook:false,
   							twitter: false,
   							linkedin:'https://www.linkedin.com/pub/scott-thomas/12/215/185',
-  							imgpth:'https:no image',
+  							imgpth:'https://fabrica-production.s3.amazonaws.com/proline-golf/item/102/image/large_thumb_gaberios.JPG',
                 inid:'in3'
   						},
   						{
