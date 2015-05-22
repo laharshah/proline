@@ -4,62 +4,65 @@
 <head>
 	<meta charset="utf-8">
 	<title>{{title}}</title>
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
 	<link href='assets/images/favicon.png' rel='shortcut icon' type='image/x-icon'>
 	<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
-
-	<!-- //for bootstrap custom styles -->
-	<!--<link href="assets/css/modern-business.css" media="all" rel="stylesheet" type="text/css" />-->
-
 	<!-- //for slding navigation bar -->
-
 	<link href="assets/css/simple-sidebar.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="assets/css/carousel-slide.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="https://proline-laharshah.c9.io/front_end/app/bower_components/angular-slick/app/styles/main.css" media="all" rel="stylesheet" type="text/css" />
-	<link type="text/css" rel="stylesheet" href="https://proline-laharshah.c9.io/front_end/app/assets/css/pricing-table.css" />
 
-
-
-	<!-- 	for lef side nav -->
-	<link rel="stylesheet" type="text/css" href="assets/css/theme-ios.css" />
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
-	<meta name="msapplication-tap-highlight" content="no" />
-
-	<style type="text/css">
-		body,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			font-family: 'Oxygen', sans-serif !important;
-		}
-	</style>
 
 	<!-- Custom CSS Stylesheet -->
+	<link rel="stylesheet" href="assets/css/carousel-slide.css">
 	<link rel="stylesheet" href="assets/css/custom-style.css">
 
 </head>
 <!-- style="background:url('https://fabrica-production.s3.amazonaws.com/proline-golf/section/971/image/putter.jpg') center center repeat fixed" -->
 
-<body lateral-slide-menu-controller>
-	<div class="modal-shiftfix">
+<body>
 
-		<!-- This is nav bar view from folder views/navbar.html -->
+	<!--style="background-image: url('assets/images/bg1.jpg');background-repeat: repeat-y repeat-x;"-->
+	<!--Header of the page -->
+	<header id="main-header">
+				<a href="#!/">
+						<img id="logopic" src="https://proline-laharshah.c9.io/front_end/app/assets/images/logo.png" alt="logo"/>
+					</a>
+					<h1 class="header_h1 header_divbg">&nbsp;</h1>
+
+	</header>
+	<aside id="main-sidebar">
 		<div ng-include src="'views/navbar.html'"></div>
-
+	</aside>	
+	<section id="main-content">
 		<!-- Common View -->
-		<div class="container" ng-view class="view-slide-in"></div>
-
+		<div ng-view></div>
+	</section>
+	<footer id="main-footer">
 		<div ng-include src="'views/footer.html'"></div>
-	</div>
+	</footer>
+
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Permanent+Marker::latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+
+
 
 	<!-- This is footer of application from folder views/navbar.html -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -79,6 +82,7 @@
 	<script type="text/javascript" src="https://proline-laharshah.c9.io/front_end/app/bower_components/angular-cookies/angular-cookies.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
 	<script type="text/javascript" src="assets/js/angular-ap-lateral-slide-menu.js"></script>
+    <!-- Script to Activate the Carousel -->
 
 </body>
 

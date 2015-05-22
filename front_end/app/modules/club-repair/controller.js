@@ -20,11 +20,6 @@ angular.module('prolineApp').controller('ClubRepairController', function ($scope
 	$scope.packages = [
 		{
 		feature1name:"one",feature2name:"two",feature3name:"three",feature4name:"four",feature1name:"one",
-		feature1content:"one",feature2content:"two",feature3content:"three",feature4content:"four"
-			
-			
-		},
-		{	},
-		{	}
+		feature1content:"one",feature2content:"two",feature3content:"three",feature4content:"four"}
 	]
 });

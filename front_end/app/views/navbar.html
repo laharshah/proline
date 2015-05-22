@@ -1,73 +1,97 @@
-<!DOCTYPE html>
-       
-    <!-- <body ng-app="myApp" lateral-slide-menu-controller >
- -->
-          <!-- MENU -->
+<div id="sidebar-wrapper" class="navbar_z">
+    <nav>
+       <ul class="sidebar-nav ulbgcolor">
+        <li>
+            <a ng-href="#!/home" ng-class="{active:isActive('/home')}"> Home</a>
+        </li>
+        <li>
+            <a ng-href="#!/instructors" ng-class="{active:isActive('/instructors')}"> Instructors</a>
+        </li>
+        <li>
+            <a ng-href="#!/club-fitting" ng-class="{active:isActive('/club-fitting')}"> Club Fitting & Repair</a>
+        </li>
+        <li>
+            <a ng-href="#!/custom-products" ng-class="{active:isActive('/custom-products')}"> Custom Gear</a>
+        </li>
+        <li>
+            <a ng-href="#!/contact" ng-class="{active:isActive('/contact')}"> Contact</a>
+        </li>
+        <li class="join_email_li">
+            <b class="join_mailtxt">Join our mailing List</b><br /> 
+            <form name="emailForm" method="post" action="https://eluck-laharshah.c9.io/eluck/api/index.php/v1/add_email">
+                <input type="email" id="email" class="join_email_txtbox form-control" ng-class="{ 'has-error' : emailForm.email.$invalid && !emailForm.email.$pristine }" name="email" placeholder="Email address..." required/>
+                <input type="button" ng-disabled="emailForm.$invalid" id="submitEmail" class="join_email_btn btn btn-md btn-info" value="Join"/>
+                <div class="alert alert-success" style="display:none" id="success-msg" role="alert">Thank you! Registered successfully!</div>
+                <div class="alert alert-danger" style="display:none" id="error-msg" role="alert">You are already registered!</div>
+            </form>
+            <dl>
+                <dd class="hover-red"><u>Chicago Location:</u></dd>
+                <dd class="hover-red">925 W Chicago Ave #1</dd>
+                <dd class="hover-red">Chicago, IL 60642</dd>
+                <dd class="orange1"><b>312.738.2427</b></dd>
+                <dd> <br/></dd>
+                <dd class="hover-red"><u>Glenview Location:</u></dd>
+                <dd class="hover-red">771 N Milwaukee Ave </dd>
+                <dd class="hover-red">Glenview, IL 60025</dd>
+                <dd class="orange1"><b>847.904.2705</b></dd>
+            </dl>
+        </li>
+    </ul>
+    </nav>
+</div>
 
-          
-          
-          <!-- main page -->
-          <div class="main-page lateral-slide-menu-main-page">
-            <a href="#!/" class="toggle-menu" lateral-slide-menu-toggle></a>
-          </div>
-
-
-        <!-- script -->
-
-
-
-<lateral-slide-menu ng-cloak>
-
-
-        <div id="sidebar-wrapper" style="z-index:15">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <div>
-                    <a href="#!/">
-                        <font style="font-color:white;font-size:24px"><img src="https://proline-laharshah.c9.io/front_end/app/assets/images/logo.png" alt="logo" width="85%" height="auto" style="background-color:#fff"/></font>
-                    </a>
-                    </div>
-                </li>
-              
-                <li>
-                    <a ng-href="#!/home" ng-class="{active:isActive('/home')}"> Home</a>
-				</li>
-                <li>
-                    <a ng-href="#!/instructors" ng-class="{active:isActive('/instructors')}"> Instructors</a>
-                </li>
-                <li>
-                	<a ng-href="#!/club-fitting" ng-class="{active:isActive('/club-fitting')}"> Club Fitting</a>
-                </li>
-                <li>
-                	<a ng-href="#!/club-repair" ng-class="{active:isActive('/club-repair')}"> Club Repair</a>
-                </li>
-                <li>
-                	<a ng-href="#!/custom-products" ng-class="{active:isActive('/custom-products')}"> Custom Products</a>
-                </li>
-                <li>
-                	<a ng-href="#!/contact" ng-class="{active:isActive('/contact')}"> Contact</a>
-                </li>                
-                <!--<li>-->
-                <!--    <pre>-->
-                <!--	    Location 1: -->
-                <!--	    925 W Chicago Ave #1-->
-                <!--	    Chicago, IL 60642-->
-                <!--	    312.738.2427-->
-                <!--	    Hours: -->
-                <!--	    9am-9pm -->
-                <!--	    7days a week-->
-                	    
-                <!--	    Location 2: -->
-                <!--	    771 N Milwaukee Ave-->
-                <!--	    Glenview, IL 60025-->
-                <!--	    847.904.2705-->
-                <!--	    M-F: 10am-8pm-->
-                <!--	    S: 10am-7pm-->
-                <!--	    Su: 11am-5pm                          -->
-                <!--    </pre>-->
-                <!--</li>-->
-            </ul>
-        </div> 
-
-
-</lateral-slide-menu>
+<script type="text/javascript">
+    function IsEmail(checkEmail) {
+      var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      return regex.test(checkEmail);
+    }
+  $("#submitEmail").click(function() {
+        	$('#submitEmail').fadeOut();
+	        $("#error-msg").fadeOut(100);
+	        $("#success-msg").fadeOut(100);
+	        var email=$("#email").val();
+	       if(IsEmail(email)) {
+	            $.ajax({
+	            type:"POST",
+	            url:"https://eluck-laharshah.c9.io/eluck/api/index.php/v1/add_email",
+	            data: {
+	                    'email':email,
+	                  },
+	            dataType:"json",
+	            success:function(html) {
+	              	$('#submitEmail').fadeIn();
+	              	if(html.result=='error') {
+	                	$("#error-msg").fadeIn(100);
+	                } else if(html.result=='noerror') {
+                        $("#success-msg").fadeIn(100);
+	                    $("#email").val("");
+	                    $("#email").attr('placeholder','Email Address...');
+	                    console.log("done");       
+	        		} else {
+	        			// $('#loader').hide();
+	                	$("#error-msg").fadeIn(1000);
+	                	$("#error-msg").html("Check your internet and try again later.");		
+	                }
+	                $("#error-msg").fadeOut(5000);
+	                $("#success-msg").fadeOut(5000);
+	        
+	        	},
+	        	error : function(html){
+	                $('#submitEmail').fadeIn();
+	                $("#error-msg").fadeIn(100);
+	                $("#error-msg").html("Check your internet and try again later.");		
+	        	    $("#error-msg").fadeOut(5000);
+	                $("#success-msg").fadeOut(5000);
+	        	    
+	        	}
+	      	});
+	       } else {
+	           $('#submitEmail').fadeIn();
+	           $("#error-msg").fadeIn(1000);
+	           $("#error-msg").html("Invalid Email Address!");		
+	           $("#error-msg").fadeOut(5000);
+	           $("#success-msg").fadeOut(5000);      
+	       }
+	           
+   });
+</script>

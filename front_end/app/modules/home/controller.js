@@ -19,17 +19,17 @@ angular.module('prolineApp').controller('homeController', function($scope, $loca
         imgname: 'small_65976_340786959371741_1214184585_n',
         pagelink: 'club-fitting'
     }];
-    
-    $scope.companydescription = "Proline Golf offers a full service golf shop, indoor golf simulators, PGA golf lessons, and BYOB. Call 312-738-2427 for more information.";
+    $scope.companydescription = "Don't forget We'll Price Match Your Best Offer!";
+
 })
 
 
 angular.module('prolineApp').controller('carouselController', function($scope) {
-    $scope.myInterval = 3000;
+
     $scope.slides = [{
-        image: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/39/image/very_large_twitter_proline.jpg'
+        image: 'https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/home-slideibar/slider_img_1.jpg'
     }, {
-        image: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/39/image/very_large_twitter_proline.jpg'
+        image: 'https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/home-slideibar/very_large_twitter_proline.jpg'
     }, {
         image: 'https://proline-laharshah.c9.io/front_end/app/assets/images/home-slideibar/very_large_clubs.JPG'
     }, {

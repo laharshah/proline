@@ -29,17 +29,7 @@ angular.module('prolineApp').config(['$routeProvider', '$locationProvider', func
 }]);
 angular.module('prolineApp').run(function(editableOptions){
 	editableOptions.theme = 'bs3';
-});;angular.module('prolineApp').directive('navToggle', function() {
-    return {
-        restrict: 'EA',
-        link: function(scope, element, attrs) {
-            element.bind('click', function() {
-                element.toggleClass(attrs.toggleClass);
-            });
-        }
-    };
-});
-;angular.module('prolineApp').controller('rootController', function ($scope, $window, $rootScope, $location, authFactory, navToggle) {
+});;;angular.module('prolineApp').controller('rootController', function ($scope, $window, $rootScope, $location, authFactory, navToggle) {
 	
 	$rootScope.title = "Chicagoland's Premier Golf Shop & Club Fitter | Proline Golf Chicago";
 	
@@ -178,12 +168,7 @@ angular.module('prolineApp').controller('ClubRepairController', function ($scope
 	$scope.packages = [
 		{
 		feature1name:"one",feature2name:"two",feature3name:"three",feature4name:"four",feature1name:"one",
-		feature1content:"one",feature2content:"two",feature3content:"three",feature4content:"four"
-			
-			
-		},
-		{	},
-		{	}
+		feature1content:"one",feature2content:"two",feature3content:"three",feature4content:"four"}
 	]
 });;angular.module('prolineApp.ClubRepair').factory('club-repairFactory', ['$http', function ($http) {
 		
@@ -207,18 +192,93 @@ angular.module('prolineApp.contact').config(['$routeProvider', function($routePr
 ]);
 
 
-angular.module('prolineApp').controller('contactController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
+angular.module('prolineApp').controller('contactController', function ($scope,$http, $rootScope, $location, $cookieStore, authFactory) {
 	
 	$scope.pagename = "contact";
-});;angular.module('prolineApp.contact').factory('contactFactory', ['$http', function ($http) {
+	$scope.result = 'hidden'
+    $scope.resultMessage;
+    $scope.formData; //formData is an object holding the fname, lname, email,phone, and message
+    $scope.submitButtonDisabled = false;
+    $scope.submitted = false; //used so that form errors are shown only after the form has been submitted
+	
+	// $scope.user = {};
+	// $scope.submitcontactForm = function (allGood) {
+	// 	if(allGood) {
+	// 		authFactory.processEmailSender($scope.user)
+	// 			.success(function (response, code) {
+	// 				$scope.submitButtonDisabled = true;
+ //                   $scope.resultMessage = data.message;
+ //                   $scope.result='bg-success';
+	// 				console.log("1");
+
+	// 			})
+	// 			.error(function (response, code) {
+	// 				if(code === 401) {
+	// 					alert("Invalid credentials. Please try again.");
+	// 				} else if(response.success===false){
+	// 					$scope.submitButtonDisabled = false;
+	//                     $scope.resultMessage = data.message;
+	//                     $scope.result='bg-danger';
+	// 					console.log(response);
+	// 					console.log(code);
+	// 					alert(response.message);
+	// 				} else {
+	// 					$scope.submitButtonDisabled = false;
+	//                     $scope.resultMessage = data.message;
+	//                     $scope.result='bg-danger';
+	// 					alert("Erro while login");
+	// 				}
+	// 			});
+	// 	}
+	// };	
+	$scope.submitform = function(contactform) {
+        $scope.submitted = true;
+        $scope.submitButtonDisabled = true;
+        if (contactform.$valid) {
+            $http.post('https://prolinee-laharshah.c9.io/proline/contact-form.php',$scope.formData)
+            .success(function(data){
+                console.log(data);
+                if (data.success) { //success comes from the return json object
+                    $scope.submitButtonDisabled = true;
+                    $scope.resultMessage = data.message;
+                    $scope.result='bg-success';
+                } else {
+                	console.log(data);
+                	$scope.submitButtonDisabled = false;
+                    $scope.resultMessage = data.message;
+                    $scope.result='bg-danger';
+                }
+            });
+        } else {
+            $scope.submitButtonDisabled = false;
+            $scope.resultMessage = 'Failed <img src="http://www.chaosm.net/blog/wp-includes/images/smilies/icon_sad.gif" alt=":(" class="wp-smiley">  Please fill out all the fields.';
+            $scope.result='bg-danger';
+        }
+    }    
+
+	
+	
+});
+;angular.module('prolineApp.contact').factory('contactFactory', ['$http', function ($http) {
 		
-		/**
+	/**
 		 * Blank authFactory
 		 * @type {Object}
 		 */
 		var authFactory = {};
 
+		// // var apiUrl = 'http://localhost:8080/eluck/api/index.php/v1/';
+
+		// var apiUrl = 'https://prolinee-laharshah.c9.io/proline/contact-form.php';
+
+		// authFactory.processEmailSender = function (user) {
+		// 	console.log("model");
+		// 	return $http.post(apiUrl, user);
+		// };
+		
 		return authFactory;
+		
+		
 	}]);;angular.module('prolineApp.CustomProducts', []);
 
 angular.module('prolineApp.CustomProducts').config(['$routeProvider', function($routeProvider) {
@@ -237,28 +297,28 @@ angular.module('prolineApp').controller('CustomProductsController', function ($s
 	
 	$scope.customproducts = [
   						{
-  							name:'Logo Golf Balls',
+  							name:'Custom Balls',
   							about:'Details here of p1',
   							imgpath: 'https://proline-laharshah.c9.io/front_end/app/assets/images/custom-products/large_thumb_logo_balls.jpg',
   						  	custom_p_id:'custom_p_1'
               			},
               			
               			{
-  							name:'Tournament',
+  							name:'Custom Bags',
   							about:'Details here of p2',
   							imgpath: 'https://proline-laharshah.c9.io/front_end/app/assets/images/custom-products/large_thumb_miniature-golf-bag-extralarge.jpg',
   						  	custom_p_id:'custom_p_2'
               			},
               			
               			{
-  							name:'Logo on Apperal',
+  							name:'Custom Apparel',
   							about:'Details here of p3',
   							imgpath: 'https://proline-laharshah.c9.io/front_end/app/assets/images/custom-products/large_thumb_CIMG09383.jpg',
   						  	custom_p_id:'custom_p_3'
               			},
               			
               			{
-  							name:'Logo on Bags',
+  							name:'Custom Accessories',
   							about:'Details here of p4',
   							imgpath: 'https://proline-laharshah.c9.io/front_end/app/assets/images/custom-products/large_thumb_scotland-golf-gear-extralarge.jpg',
   						  	custom_p_id:'custom_p_4'
@@ -292,17 +352,17 @@ angular.module('prolineApp').controller('CustomProductsController', function ($s
         imgname: 'small_65976_340786959371741_1214184585_n',
         pagelink: 'club-fitting'
     }];
-    
-    $scope.companydescription = "Proline Golf offers a full service golf shop, indoor golf simulators, PGA golf lessons, and BYOB. Call 312-738-2427 for more information.";
+    $scope.companydescription = "Don't forget We'll Price Match Your Best Offer!";
+
 })
 
 
 angular.module('prolineApp').controller('carouselController', function($scope) {
-    $scope.myInterval = 3000;
+
     $scope.slides = [{
-        image: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/39/image/very_large_twitter_proline.jpg'
+        image: 'https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/home-slideibar/slider_img_1.jpg'
     }, {
-        image: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/39/image/very_large_twitter_proline.jpg'
+        image: 'https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/home-slideibar/very_large_twitter_proline.jpg'
     }, {
         image: 'https://proline-laharshah.c9.io/front_end/app/assets/images/home-slideibar/very_large_clubs.JPG'
     }, {

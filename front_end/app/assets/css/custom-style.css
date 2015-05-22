@@ -1,7 +1,184 @@
-body{
-    background-image:url('http://soccer-tricks.com/wp-content/uploads/2014/12/grass-background-clipart-93.jpg');
+body {
+	background-image: url("https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/home-slideibar/golf-ball-round1.png");
+}
+h1,
+h2,
+h3,
+h5,
+h6 {
+	font-family: 'Oxygen', sans-serif !important;
+}
+#company-description h4{
+	font-family: "Permanent Marker", cursive !important;
+}
+#company-description h4:hover{
+	color:#FF9900;
+}
+dl>dd {
+	color: #000;
+	background-color: #fff;
+}
+.hover-red {
+	color: #000;
+}
+.hover-red:hover {
+	color: red;
+}
+.orange1 {
+	color: orange;
+}
+#main-header {
+	z-index: 999;
+	margin-left: 0;
+	width: 100%;
+}
+#main-sidebar {
+	/*margin-top:-1%;*/
+	
+	margin-left: 1%;
+	width: 7%;
+}
+#main-content {
+	padding-left: 19%;
+	padding-right: 5%;
+	width: 100%;
+	background-image: url("https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/home-slideibar/golf-ball-round1.png");
+}
+#main-footer {
+	width: 100%;
+}
+#logopic {
+	padding-left: 1%;
+	width: 245px;
+	float: left;
+}
+#company-description {
+	z-index: 999;
+	margin-left: 3%;
+	margin-right: 3%;
+
+	height: 5%;
+	background:transparent;
+
 }
 
-footer{
-    background-color:#F7F3EB;    
+.footerbg {
+	background-color: #F7F3EB;
+}
+.left {
+	float: left;
+	justify: left;
+}
+.right {
+	float: right;
+}
+#service-boxes {
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+#slider-section-height {
+	max-height: 372px;
+	overflow: hidden;
+}
+.carousel-indicators {
+	visibility: hidden;
+}
+.join_mailtxt {
+	margin-left: -20px;
+	color: #000;
+}
+.padd-bottom-2 {
+	padding-bottom: 2%;
+}
+.join_email_li {
+	text-indent: 0px;
+	text-align: center;
+	background-color: #fff;
+}
+.join_email_txtbox {
+	width: 66%;
+	float: left;
+	margin-left: 12px;
+}
+.join_email_btn {
+	margin-top: -7px;
+	margin-left: -10px;
+}
+.join_email_btn:hover {
+	margin-top: -7px;
+	margin-left: -10px;
+	/*background-color: ;*/
+}
+.contact_p {
+	margin-bottom: 0px;
+	text-align: left;
+}
+.header_h1 {
+	color: #fff;
+}
+.header_divbg {
+	background: url(https://fabrica-production.s3.amazonaws.com/proline-golf/section/11/image/putting.jpg);
+	width: auto;
+	height: auto;
+}
+.navbar_z {
+	z-index: 5;
+}
+.seeThru {
+	opacity: .4;
+	color: transparent;
+}
+.bigicon {
+	font-size: 20px;
+	color: #571400;
+}
+.smfooter {
+	padding-left: 20px;
+	font-size: 35px;
+	color: #571400;
+}
+.footer-facebook {
+	width: 32px;
+	height: 32px;
+	background: url(https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/socialmediaimg/facebook_32.png) 32px -32px;
+}
+.footer-twitter {
+	width: 32px;
+	height: 32px;
+	background: url(https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/socialmediaimg/twitter_32.png) 32px -32px;
+}
+.footer-yelp {
+	width: 32px;
+	height: 32px;
+	background: url(https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/socialmediaimg/yelp_32.png) 32px -32px;
+}
+#first-footer,
+#second-footer,
+#third-footer {
+	justify: left;
+	padding-top: 1%;
+	padding-left: 1%;
+}
+.ulbgcolor {
+	background: rgb(86, 114, 0);
+}
+.display-inline {
+	display: inline;
+}
+.panel-heading {
+	background-color: rgb(136, 191, 232);
+}
+.bg-white{
+background: rgb(255,255,255); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ3JSIgc3RvcC1jb2xvcj0iI2Y2ZjZmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZGVkZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(47%,rgba(246,246,246,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-8 */
+
+
 }

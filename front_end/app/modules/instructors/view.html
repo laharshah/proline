@@ -1,44 +1,40 @@
-<!--<div class="container">-->
-<!--	<center style="padding-top:30px">-->
-<!--		<h1 style="color:green">Hello You are on {{pagename}} 's page </h1>-->
-<!--		<h2><a href="#/">Home</a> / Instructions </h2>-->
-<!--		<h3>Meet Our Instructors</h3>-->
-<!--	</center>-->
-<!--<div>-->
-
-<div id="itop" class="row  well well-sm">
-	<div class="col-md-12">
-		<center><h2 style="color:green">Meet Our Instructors</h2></center>
-		<!--<h2>Here are our instructors</h2>-->
-	</div>
-	<div class="col-md-12" style="padding-top:20px">
-		<div class="row">
-			<div class="col-md-3" ng-repeat="instructor in instructors track by $index">
-				<div class="ol-md-12"><center>
-					<img src="{{instructor.imgpath}}" class="img-responsive img-circle" alt="{{instructor.name}}">
-					</center>
-				</div>
+<div class="container">
+	
+	<div class="row">
+		<div class="col-md-12" >
+		
+			<div class="row well well-sm bg-white">
 				<div class="col-md-12">
-					<a href="#!/instructors/#{{instructor.inid}}">
-				<center><h3>{{instructor.name}}</h3></center></a>
+					<center><h2 style="color:green">Meet Our Instructors</h2></center>
+					<!--<h2>Here are our instructors</h2>-->
 				</div>
-				
+				<div class="col-md-12" style="padding-top:20px">
+					<div class="row">
+						<div class="col-md-3" ng-repeat="instructor in instructors track by $index">
+							<div class="col-md-12"><center>
+								<img src="{{instructor.imgpath}}" class="img-responsive img-circle" alt="{{instructor.name}}">
+								</center>
+							</div>
+							<div class="col-md-12">
+								<a href="#!/instructors/#{{instructor.inid}}">
+								<center><h3>{{instructor.name}}</h3></center></a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-</div>
-</div>
-
-<div class="row">
-    			<div class="col-md-12" style="padding-left:50px">
-        				
+		
+			<div class="row">
+		    	<div class="col-md-12">
+		        				
     				<!-- 1st instructor -->
         				<div id="in1" class="panel panel-default">
 						  <div class="panel-heading">
 						    <div class="row">
 						    		<div class="col-md-9"><font style="padding-left:15px;font-size:24px;color:#571400"><b>Gabe Rios, GM</b></font></div>
 						    		<div class="col-md-3">
-						    			<a class="pull-right" href="#!/instructors/#itop" target="#!/instructors/#itop"><input type="button" class="btn btn-primary btn-sm" value="Top of Page" /></a> 
+						    			<a class="pull-right" href="#!/instructors"><input type="button" class="btn btn-primary btn-sm" value="Top of Page" /></a> 
 
 						    			<a style="padding-right:10px" class="pull-right" href="http://www.linkedin.com/in/gaberiosgolf/" target="_blank"><i class="fa fa-linkedin bigicon"></i></a>
 
@@ -80,7 +76,6 @@
 						  </div>
 						</div>
 
-
 					<!-- 2nd instructor -->
         				<div id="in2" class="panel panel-default">
 						  <div class="panel-heading">
@@ -88,7 +83,7 @@
 						    		<div class="col-md-9"><font style="padding-left:15px;font-size:24px;color:#571400"><b>Marcus Yado</b></font></div>
 						    		<div class="col-md-3">
 						    			
-						    			<a class="pull-right" href="#!/instructors/#itop" target="#!/instructors/#itop"><input type="button" class="btn btn-primary btn-sm" value="Top of Page" /></a>
+						    			<a class="pull-right" href="#!/instructors"><input type="button" class="btn btn-primary btn-sm" value="Top of Page" /></a>
 
 						    			<a class="pull-right" style="padding-right:10px" href="https://www.facebook.com/mychicagogolf" target="_blank"><i class="fa fa-facebook bigicon"></i></a>
 						    			 
@@ -126,7 +121,7 @@
 						    		<div class="col-md-8"><font style="padding-left:15px;font-size:24px;color:#571400"><b>Scott Thomas</b></font></div>
 						    		<div class="col-md-4">
 						    			
-						    			<a class="pull-right" href="http://prolinechicago.com/contact" target="#!/instructors/#itop"><input type="button" class="btn btn-primary btn-sm" value="Top of Page" /></a>
+									<a class="pull-right" href="#!/instructors"><input style="padding-left:20px" type="button" class="btn btn-primary btn-sm" value="Top of Page" /></a>
 
 						    			<a class="pull-right" style="padding-right:10px" href="https://www.linkedin.com/pub/scott-thomas/12/215/185" target="_blank"><i class="fa fa-linkedin bigicon"></i></a>
 						    			
@@ -160,47 +155,41 @@
 
 					<!-- 4th instructor -->
         				<div id="in4" class="panel panel-default">
-						  <div class="panel-heading">
-						    <div class="row">
-						    		<div class="col-md-9"><font style="padding-left:15px;font-size:24px;color:#571400"><b>Scott Hogan</b></font></div>
-						    		<div class="col-md-3">
-						    			<a class="pull-right" href="#!/instructors/#itop"><input style="padding-left:20px" type="button" class="btn btn-primary btn-sm" value="Top of Page" /></a> 
-						    		</div>
-						    </div>						
-						  </div>
-						  <div class="panel-body">
-						    <div class="row">
-						    	<div class="col-md-4">
-						    		<center>
-										<img src="https://fabrica-production.s3.amazonaws.com/proline-golf/item/3800/image/large_thumb_Scott_Hogan.jpg" class="img-responsive img-rounded" alt="{{instructor.name}}">
-									</center>
-						    	</div>
-						    	<div class="col-md-8">
-						    	<div class="row">
-						    		<div class="col-md-12">
-						    			<p style="text-align:left">
-						    			Scott is a <a href="http://scotthogangolf.com/">PGA Certified Professional</a> in Teaching and Coaching and was selected at one of the countries Top 50 Growth of the Game Teaching Professionals by the GRAA in 2014. Scott has taught approximately 10,000 lessons to 300 different students and helped his students win Club Championships, shoot career rounds and redefine their goals to levels his students would not have thought possible. Scott's passion has also taken him to work with golf's governing bodies to help bring new golfers and juniors to the game and help them to experience the joy and sense of accomplishment he feels when hitting a successful golf shot. Still though, Scott is looking to be educated on the latest techniques and cutting edge technologies that could possibly help his students improve. He has learned and collaborated with some of the greatest in the golf industry including Mike Malaska (2011 PGA Teacher of the Year), Tim Mahoney (Golf Magazine Top 100) and several more. Scott's philosophy is simple, to develop each individuals athletic fundamentals within their golf swing. Golf is a sport, but too often people forget that. Scott hopes that each of his students can feel like they would over a golf shot as if they were shooting a basket or throwing a ball. Without these athletic fundamentals, the athlete will never be able to perform under pressure. After that, Scott takes a holistic approach to the game working with students on their Full Swing, Short Game, Mental Game, Physical Fitness, Club Fitting and Practice routines.
-						    			</p>
-						    		</div>
-						    		<div class="col-md-12" style="padding-top:10px">
-						    			<a href="http://scotthogangolf.lessoncaddy.com/people/10765-scott-hogan" target="_blank"><input type="button" class="btn btn-primary btn-sm" value="Book Lessons" /></a> 
-						    		</div>
-						    	</div>
-						    	
-						    	</div>
-						    </div>
-						  </div>
-						</div>
-        		</div>
-        	
-    		</div>
-</div>
+								  <div class="panel-heading">
+								    <div class="row">
+								    		<div class="col-md-9"><font style="padding-left:15px;font-size:24px;color:#571400"><b>Scott Hogan</b></font></div>
+								    		<div class="col-md-3">
+								    			<a class="pull-right" href="#!/instructors"><input style="padding-left:20px" type="button" class="btn btn-primary btn-sm" value="Top of Page" /></a> 
+								    		</div>
+								    </div>						
+								  </div>
+								  <div class="panel-body">
+								    <div class="row">
+								    	<div class="col-md-4">
+								    		<center>
+												<img src="https://fabrica-production.s3.amazonaws.com/proline-golf/item/3800/image/large_thumb_Scott_Hogan.jpg" class="img-responsive img-rounded" alt="{{instructor.name}}">
+											</center>
+								    	</div>
+								    	<div class="col-md-8">
+								    	<div class="row">
+								    		<div class="col-md-12">
+								    			<p style="text-align:left">
+								    			Scott is a <a href="http://scotthogangolf.com/">PGA Certified Professional</a> in Teaching and Coaching and was selected at one of the countries Top 50 Growth of the Game Teaching Professionals by the GRAA in 2014. Scott has taught approximately 10,000 lessons to 300 different students and helped his students win Club Championships, shoot career rounds and redefine their goals to levels his students would not have thought possible. Scott's passion has also taken him to work with golf's governing bodies to help bring new golfers and juniors to the game and help them to experience the joy and sense of accomplishment he feels when hitting a successful golf shot. Still though, Scott is looking to be educated on the latest techniques and cutting edge technologies that could possibly help his students improve. He has learned and collaborated with some of the greatest in the golf industry including Mike Malaska (2011 PGA Teacher of the Year), Tim Mahoney (Golf Magazine Top 100) and several more. Scott's philosophy is simple, to develop each individuals athletic fundamentals within their golf swing. Golf is a sport, but too often people forget that. Scott hopes that each of his students can feel like they would over a golf shot as if they were shooting a basket or throwing a ball. Without these athletic fundamentals, the athlete will never be able to perform under pressure. After that, Scott takes a holistic approach to the game working with students on their Full Swing, Short Game, Mental Game, Physical Fitness, Club Fitting and Practice routines.
+								    			</p>
+								    		</div>
+								    		<div class="col-md-12" style="padding-top:10px">
+								    			<a href="http://scotthogangolf.lessoncaddy.com/people/10765-scott-hogan" target="_blank"><input type="button" class="btn btn-primary btn-sm" value="Book Lessons" /></a> 
+								    		</div>
+								    	</div>
+								    	
+								    	</div>
+								    </div>
+								  </div>
+								</div>
+		        </div>
+			</div>
+	
+		</div>
+	</div>
 
 </div>
-<style>
-    
-    .bigicon {
-        font-size: 20px;
-        color: #571400;
-    }
-</style>

@@ -1,64 +1,54 @@
-<!--<div class="container">-->
-<!--	<center style="padding-top:30px">-->
-<!--		<h1 style="color:green">Hello You are on {{pagename}} 's page </h1>-->
-<!--	</center>-->
-<!--</div>-->
 
-<div class="row">
-        
-    <div class="col-md-8 well well-sm">
-	    <div class="row">
-	        <div class="col-md-12">
-    	      <center><h2 style="color:green"> Place Your Logo on Premium Golf Gear</h2></center>
-    	  </div>  
-    	    <div class="col-md-12">
-                <p style="text-align:left"><b>Golf gear with custom logo are great for corporate outings, team building events, trade show giveaways, or business gifts.  We can put your logo on the following golf gear:</b></p>	
-	            <ul>
-        			<li>Logo Golf Balls</li>
-        			<li>Logo Apparel</li>
-        			<li>Logo Bags</li>
-        			<li>Tournament Accessories</li>
-        			<li>Team Apparel</li>
-        			<li>Team Bags</li>
-        		</ul>
-    	  </div>        
-	        
+<div class="container">
+
+	<div class="row">
+	    <div class="col-md-5 well well-sm">
+		    	
+		    	
+		    	
+		        <div class="col-md-12">
+	    	      <center><h2 style="color:green"> Custom Golf Gear</h2></center>
+	    	  	</div>    <!-- end custom golf gear header-->
+	    	  	
+	    	  	
+	    	  	
+	    	    <div class="col-md-12">
+	                <hr style="background-color:#000;" !important/>
+                    <p style="text-align:left"><b>Golf gear with custom logo are great for corporate outings, team building events, trade show giveaways, or business gifts.  We can put your logo on the following golf gear:</b></p>	
+		            <p>Logo Golf Balls * Logo Apparel * Logo Bags *Tournament Accessories * Team Apparel * Team Bags</p>
+	    	  	</div>    <!-- end description -->
+	    	  	
+	    	  	
+	    	  	
+		        <div class="col-md-12">
+	    	      <center><h4 style="color:green"> Contact Us for a Quick Quote</h4></center>
+	    	    </div>   <!-- end quick quote -->
+	    	    
+	    	    <div class"col-md-12">
+		           <b style="font-size:24px"></b>
+		           		<p>Chicago :
+			    			925 W Chicago Ave #1<br /> 
+							Chicago, IL 60642 | <i class="fa fa-phone"></i>  312.738.2427
+			    		</p>
+						<p>Glenview :
+			    			771 N Milwaukee Ave<br /> 
+							Glenview, IL 60025 | <i class="fa fa-phone"></i>   847.904.2705<br />
+			    		<i class="fa fa-envelope"></i>  <a href="mailto:info@prolinechicago.com" target="_blank">info@prolinechicago.com</a>
+						</p>
+				</div>   <!-- end contact info -->
+		</div>
+		<div class="col-md-7">
+			<!--custom product s-->
+		    <div class="col-md-6 padd-bottom-2 hero-feature" ng-repeat="customproduct in customproducts track by $index">
+		        <div class="thumbnail" id="{{customproduct.custom_p_id}}">
+		            <img style="width:335px" src="{{customproduct.imgpath}}" alt="logo_balls">
+		            <div class="caption">
+		                <center><h4>{{customproduct.name}}</h4></center>
+		                <!--<p style="margin-bottom:5px">{{customproduct.about}}</p>-->
+		            </div>
+		        </div>
+		    </div>
 	    </div>
 	</div>
-	<div class="col-md-4 well well-sm"  style="padding-left:5px">
-	    <div class="row">
-	        <div class="col-md-12">
-    	      <center><h4 style="color:green"> Contact Us for a Quick Quote</h4></center>
-    	    </div>  
-    	     <div class"col-md-12">
-	           <b style="font-size:24px"></b>
-	           		<p>Chicago :
-		    			925 W Chicago Ave #1<br /> 
-						Chicago, IL 60642 | <i class="fa fa-phone"></i>  312.738.2427
-		    		</p>
-					<p>Glenview :
-		    			771 N Milwaukee Ave<br /> 
-						Glenview, IL 60025 | <i class="fa fa-phone"></i>   847.904.2705<br />
-		    		<i class="fa fa-envelope"></i>  <a href="mailto:info@prolinechicago.com" target="_blank">info@prolinechicago.com</a>
-					</p>
-			</div>   
-	    </div>
-	</div>
-	
-</div>
-<div class="row">
-   <!--custom product s-->
-    <div class="col-md-3 col-sm-3 hero-feature" ng-repeat="customproduct in customproducts track by $index">
-        <div class="thumbnail" id="{{customproduct.custom_p_id}}">
-            <img style="width:335px" src="{{customproduct.imgpath}}" alt="logo_balls">
-            <div class="caption">
-                <h3>{{customproduct.name}}</h3>
-                <p style="margin-bottom:5px">{{customproduct.about}}</p>
-                <!--<p style="margin-bottom:5px">-->
-                <!--    <a href="#!/instruction" class="btn btn-primary">Read More</a>-->
-                <!--</p>-->
-            </div>
-        </div>
-    </div>
-    
+	 
 </div>
