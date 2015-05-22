@@ -9,6 +9,7 @@ angular.module('prolineApp', [
 		'prolineApp.auth',
 		'prolineApp.welcome',
 		'prolineApp.ClubFitting',
+		'prolineApp.simulators',
 		'prolineApp.ClubRepair',
 		'prolineApp.contact',
 		'prolineApp.CustomProducts',
