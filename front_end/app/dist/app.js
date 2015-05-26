@@ -162,7 +162,6 @@ angular.module('prolineApp.ClubRepair').config(['$routeProvider', function($rout
 			});
 	}
 ]);
-
 angular.module('prolineApp').controller('ClubRepairController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
 	
 	$scope.pagename = "club-repair";
@@ -300,28 +299,28 @@ angular.module('prolineApp').controller('CustomProductsController', function ($s
   						{
   							name:'Custom Balls',
   							about:'Details here of p1',
-  							imgpath: 'https://proline-laharshah.c9.io/front_end/app/assets/images/custom-products/large_thumb_logo_balls.jpg',
+  							imgpath: 'assets/images/custom-products/large_thumb_logo_balls.jpg',
   						  	custom_p_id:'custom_p_1'
               			},
               			
               			{
   							name:'Custom Bags',
   							about:'Details here of p2',
-  							imgpath: 'https://proline-laharshah.c9.io/front_end/app/assets/images/custom-products/large_thumb_miniature-golf-bag-extralarge.jpg',
+  							imgpath: 'assets/images/custom-products/large_thumb_miniature-golf-bag-extralarge.jpg',
   						  	custom_p_id:'custom_p_2'
               			},
               			
               			{
   							name:'Custom Apparel',
   							about:'Details here of p3',
-  							imgpath: 'https://proline-laharshah.c9.io/front_end/app/assets/images/custom-products/large_thumb_CIMG09383.jpg',
+  							imgpath: 'assets/images/custom-products/large_thumb_CIMG09383.jpg',
   						  	custom_p_id:'custom_p_3'
               			},
               			
               			{
   							name:'Custom Accessories',
   							about:'Details here of p4',
-  							imgpath: 'https://proline-laharshah.c9.io/front_end/app/assets/images/custom-products/large_thumb_scotland-golf-gear-extralarge.jpg',
+  							imgpath: 'assets/images/custom-products/large_thumb_scotland-golf-gear-extralarge.jpg',
   						  	custom_p_id:'custom_p_4'
               			}];
 	
@@ -357,17 +356,16 @@ angular.module('prolineApp').controller('CustomProductsController', function ($s
 
 })
 
-
 angular.module('prolineApp').controller('carouselController', function($scope) {
 
     $scope.slides = [{
-        image: 'https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/home-slideibar/slider_img_1.jpg'
+        image: 'assets/images/home-slideibar/slider_img_1.jpg'
     }, {
-        image: 'https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/home-slideibar/very_large_twitter_proline.jpg'
+        image: 'assets/images/home-slideibar/very_large_twitter_proline.jpg'
     }, {
-        image: 'https://proline-laharshah.c9.io/front_end/app/assets/images/home-slideibar/very_large_clubs.JPG'
+        image: 'assets/images/home-slideibar/very_large_clubs.JPG'
     }, {
-        image: 'https://proline-laharshah.c9.io/front_end/app/assets/images/home-slideibar/very_large_1.jpg'
+        image: 'assets/images/home-slideibar/very_large_1.jpg'
     }];
 });;;angular.module('prolineApp.instructors', []);
 
@@ -385,15 +383,15 @@ angular.module('prolineApp').controller('InstructorsController', function ($scop
 	$scope.pagename = "instructors";
 
 	$scope.instructors = [
-  						{
-  							name:'Gabe Rios, GM',
-  							about:'Gabe Rios is an Illinois PGA Golf Professional, founder of Gabe Rios Golf, and General Manager of Proline Golf.  His unique ability to patiently explain swing problems and quickly improve contact and direction have made him the most requested teaching professional in Chicago. As a graduate of Coastal Carolina University he earned a degree in Marketing and Professional Golf Management. He was taught the golf swing by Illinois Golf Legend Jerry Vidovic. The knowledge handed down from Jerry and Gabe’s 26 years of golfing experience make him an excellent choice for golf lessons in Chicago. Gabe is available to fix your slice 6 days a week at Proline Golf. Lesson hours are 10-6 during the week and 10-5 on Saturdays. His lessons include real time ball flight, golf course simulation, video analysis, downloadable lessons, and most importantly a patient relaxed environment to enjoy your golf lesson every time. Outdoor range and playing lessons (within 30 minutes of Chicago) are available, please call Gabe directly at 847-372-0691 for more information.',
-  							booklink:'https://booknow.appointment-plus.com/6r0crrgy/',
-  							facebook:'https://www.facebook.com/gaberiosgolf',
-  							twitter:'https://twitter.com/gaberiosgolf',
-  							linkedin:'http://www.linkedin.com/in/gaberiosgolf/',
-  							imgpath: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/102/image/large_thumb_gaberios.JPG',
-  						  inid:'in1'
+  			{
+  				name:'Gabe Rios, GM',
+  				about:'Gabe Rios is an Illinois PGA Golf Professional, founder of Gabe Rios Golf, and General Manager of Proline Golf.  His unique ability to patiently explain swing problems and quickly improve contact and direction have made him the most requested teaching professional in Chicago. As a graduate of Coastal Carolina University he earned a degree in Marketing and Professional Golf Management. He was taught the golf swing by Illinois Golf Legend Jerry Vidovic. The knowledge handed down from Jerry and Gabe’s 26 years of golfing experience make him an excellent choice for golf lessons in Chicago. Gabe is available to fix your slice 6 days a week at Proline Golf. Lesson hours are 10-6 during the week and 10-5 on Saturdays. His lessons include real time ball flight, golf course simulation, video analysis, downloadable lessons, and most importantly a patient relaxed environment to enjoy your golf lesson every time. Outdoor range and playing lessons (within 30 minutes of Chicago) are available, please call Gabe directly at 847-372-0691 for more information.',
+  				booklink:'https://booknow.appointment-plus.com/6r0crrgy/',
+  				facebook:'https://www.facebook.com/gaberiosgolf',
+  				twitter:'https://twitter.com/gaberiosgolf',
+  				linkedin:'http://www.linkedin.com/in/gaberiosgolf/',
+  				imgpath: 'assets/images/instructors/large_thumb_gaberios.JPG',
+  			  	inid:'in1'
               },
   						{
   							name:'Marcus Yado',
@@ -402,8 +400,8 @@ angular.module('prolineApp').controller('InstructorsController', function ($scop
   							facebook:'https://www.facebook.com/mychicagogolf',
   							twitter: false,
   							linkedin: false,
-  							imgpath: 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/4/image/large_thumb_yado_corny_pic.jpg',
-                inid:'in2'
+  							imgpath: 'assets/images/instructors/large_thumb_yado_corny_pic.jpg',
+                			inid:'in2'
   						},
   						{
   							name:'Scott Thomas',
@@ -412,7 +410,7 @@ angular.module('prolineApp').controller('InstructorsController', function ($scop
   							facebook:false,
   							twitter: false,
   							linkedin:'https://www.linkedin.com/pub/scott-thomas/12/215/185',
-  							imgpath:'https://fabrica-production.s3.amazonaws.com/proline-golf/item/102/image/large_thumb_gaberios.JPG',
+  							imgpath:'assets/images/instructors/large_thumb_gaberios.JPG',
                 			inid:'in3'
   						},
   						{
@@ -422,7 +420,7 @@ angular.module('prolineApp').controller('InstructorsController', function ($scop
   							facebook:false,
   							twitter:false,
   							linkedin:false,
-  							imgpath : 'https://fabrica-production.s3.amazonaws.com/proline-golf/item/3800/image/large_thumb_Scott_Hogan.jpg',
+  							imgpath : 'assets/images/instructors/large_thumb_Scott_Hogan.jpg',
                 inid:'in4' 
   						
               }];

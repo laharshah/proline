@@ -1,5 +1,5 @@
 body {
-	background-image: url("https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/home-slideibar/golf-ball-round1.png");
+	background-image: url("../images/home-slideibar/golf-ball-round1.png");
 }
 h1,
 h2,
@@ -28,8 +28,15 @@ dl>dd {
 	color: orange;
 }
 .btn-booknow {
-	padding-top :2%;
-	padding-right:7%;
+	padding-top :5px;
+	padding-right:17%;
+}
+#btn-book {
+	width:250%;
+	height:75px;
+	font-size:22px;
+	font-family: 'Impact';
+	background:#336699;
 }
 #main-header {
 	z-index: 999;
@@ -46,7 +53,7 @@ dl>dd {
 	padding-left: 19%;
 	padding-right: 5%;
 	width: 100%;
-	background-image: url("https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/home-slideibar/golf-ball-round1.png");
+	background-image: url("../images/home-slideibar/golf-ball-round1.png");
 }
 #main-footer {
 	width: 100%;
@@ -121,7 +128,7 @@ dl>dd {
 	color: #fff;
 }
 .header_divbg {
-	background: url(https://fabrica-production.s3.amazonaws.com/proline-golf/section/11/image/putting.jpg);
+	background: url(../images/instructors/putting.jpg);
 	width: auto;
 	height: auto;
 }
@@ -144,17 +151,17 @@ dl>dd {
 .footer-facebook {
 	width: 32px;
 	height: 32px;
-	background: url(https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/socialmediaimg/facebook_32.png) 32px -32px;
+	background: url(../images/socialmediaimg/facebook_32.png) 32px -32px;
 }
 .footer-twitter {
 	width: 32px;
 	height: 32px;
-	background: url(https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/socialmediaimg/twitter_32.png) 32px -32px;
+	background: url(../images/socialmediaimg/twitter_32.png) 32px -32px;
 }
 .footer-yelp {
 	width: 32px;
 	height: 32px;
-	background: url(https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/socialmediaimg/yelp_32.png) 32px -32px;
+	background: url(../images/socialmediaimg/yelp_32.png) 32px -32px;
 }
 #first-footer,
 #second-footer,

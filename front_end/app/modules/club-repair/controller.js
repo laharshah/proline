@@ -13,7 +13,6 @@ angular.module('prolineApp.ClubRepair').config(['$routeProvider', function($rout
 			});
 	}
 ]);
-
 angular.module('prolineApp').controller('ClubRepairController', function ($scope, $rootScope, $location, $cookieStore, authFactory) {
 	
 	$scope.pagename = "club-repair";

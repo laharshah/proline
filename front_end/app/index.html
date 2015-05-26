@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
 	<link href='assets/images/favicon.png' rel='shortcut icon' type='image/x-icon'>
 	<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -16,12 +16,13 @@
 	<!-- //for slding navigation bar -->
 	<link href="assets/css/simple-sidebar.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="assets/css/carousel-slide.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="https://proline-laharshah.c9.io/front_end/app/bower_components/angular-slick/app/styles/main.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="bower_components/angular-slick/app/styles/main.css" media="all" rel="stylesheet" type="text/css" />
 
 
 	<!-- Custom CSS Stylesheet -->
 	<link rel="stylesheet" href="assets/css/carousel-slide.css">
 	<link rel="stylesheet" href="assets/css/custom-style.css">
+	<!--<link rel="stylesheet" href="bower_components/uikit/css/uikit.css">-->
 
 </head>
 
@@ -30,11 +31,11 @@
 	<!--Header of the page -->
 	<header id="main-header">
 				<a href="#!/">
-						<img id="logopic" src="https://proline-laharshah.c9.io/front_end/app/assets/images/logo.png" alt="logo"/>
+						<img id="logopic" src="assets/images/logo.png" alt="logo"/>
 				</a>
 				<div class="pull-right btn-booknow">
 					<a href="https://booknow.appointment-plus.com/6r0crrgy/" target="_blank">
-						<input type="button" name="Book Now" value="Book Now" class="btn btn-primary"/>
+						<button id="btn-book" name="Book Now" class="btn btn-success">Book Now</button>
 					</a>
 				</div>
 					<h1 class="header_h1 header_divbg">&nbsp;</h1>
@@ -78,13 +79,14 @@
 	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
 	<!-- Angular Modules Vendors -->
 	<script src="dist/angular-modules.min.js" type="text/javascript"></script>
-	<script src="https://proline-laharshah.c9.io/front_end/app/bower_components/angular-slick/dist/slick.js"></script>
+	<script src="bower_components/angular-slick/dist/slick.js"></script>
 
 	<!-- Application -->
 	<script src="dist/app.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="https://proline-laharshah.c9.io/front_end/app/bower_components/angular-cookies/angular-cookies.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
 	<script type="text/javascript" src="assets/js/angular-ap-lateral-slide-menu.js"></script>
+	<!--<script type="text/javascript" src="bower_components/uikit/js/uikit.js"></script>-->
     <!-- Script to Activate the Carousel -->
 
 </body>

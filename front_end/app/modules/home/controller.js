@@ -23,16 +23,15 @@ angular.module('prolineApp').controller('homeController', function($scope, $loca
 
 })
 
-
 angular.module('prolineApp').controller('carouselController', function($scope) {
 
     $scope.slides = [{
-        image: 'https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/home-slideibar/slider_img_1.jpg'
+        image: 'assets/images/home-slideibar/slider_img_1.jpg'
     }, {
-        image: 'https://prolinee-laharshah.c9.io/proline/front_end/app/assets/images/home-slideibar/very_large_twitter_proline.jpg'
+        image: 'assets/images/home-slideibar/very_large_twitter_proline.jpg'
     }, {
-        image: 'https://proline-laharshah.c9.io/front_end/app/assets/images/home-slideibar/very_large_clubs.JPG'
+        image: 'assets/images/home-slideibar/very_large_clubs.JPG'
     }, {
-        image: 'https://proline-laharshah.c9.io/front_end/app/assets/images/home-slideibar/very_large_1.jpg'
+        image: 'assets/images/home-slideibar/very_large_1.jpg'
     }];
 });
