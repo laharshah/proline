@@ -4,7 +4,6 @@ angular.module('prolineApp', [
 		'ngCookies',
 		'ui.bootstrap',
 		'xeditable',
-		'slick',
 		'ap.lateralSlideMenu',
 		'prolineApp.auth',
 		'prolineApp.welcome',
@@ -30,16 +29,9 @@ angular.module('prolineApp').config(['$routeProvider', '$locationProvider', func
 }]);
 angular.module('prolineApp').run(function(editableOptions){
 	editableOptions.theme = 'bs3';
-});;;angular.module('prolineApp').controller('rootController', function ($scope, $window, $rootScope, $location, authFactory, navToggle) {
+});;;angular.module('prolineApp').controller('rootController', function ($scope, $rootScope) {
 	
 	$rootScope.title = "Chicagoland's Premier Golf Shop & Club Fitter | Proline Golf Chicago";
-	
-	$scope.user = {};
-	
-    // $scope.isActive = function(route){
-    //     return route === $location.path();
-    // };	
-
 
 });
 
@@ -179,107 +171,7 @@ angular.module('prolineApp').controller('ClubRepairController', function ($scope
 		var authFactory = {};
 
 		return authFactory;
-	}]);;angular.module('prolineApp.contact', []);
-
-angular.module('prolineApp.contact').config(['$routeProvider', function($routeProvider) {
-				
-		$routeProvider
-			.when("/contact", {
-				controller: 'contactController',
-				templateUrl: 'modules/contact/view.html',
-			});
-	}
-]);
-
-
-angular.module('prolineApp').controller('contactController', function ($scope,$http, $rootScope, $location, $cookieStore, authFactory) {
-	
-	$scope.pagename = "contact";
-	$scope.result = 'hidden'
-    $scope.resultMessage;
-    $scope.formData; //formData is an object holding the fname, lname, email,phone, and message
-    $scope.submitButtonDisabled = false;
-    $scope.submitted = false; //used so that form errors are shown only after the form has been submitted
-	
-	// $scope.user = {};
-	// $scope.submitcontactForm = function (allGood) {
-	// 	if(allGood) {
-	// 		authFactory.processEmailSender($scope.user)
-	// 			.success(function (response, code) {
-	// 				$scope.submitButtonDisabled = true;
- //                   $scope.resultMessage = data.message;
- //                   $scope.result='bg-success';
-	// 				console.log("1");
-
-	// 			})
-	// 			.error(function (response, code) {
-	// 				if(code === 401) {
-	// 					alert("Invalid credentials. Please try again.");
-	// 				} else if(response.success===false){
-	// 					$scope.submitButtonDisabled = false;
-	//                     $scope.resultMessage = data.message;
-	//                     $scope.result='bg-danger';
-	// 					console.log(response);
-	// 					console.log(code);
-	// 					alert(response.message);
-	// 				} else {
-	// 					$scope.submitButtonDisabled = false;
-	//                     $scope.resultMessage = data.message;
-	//                     $scope.result='bg-danger';
-	// 					alert("Erro while login");
-	// 				}
-	// 			});
-	// 	}
-	// };	
-	$scope.submitform = function(contactform) {
-        $scope.submitted = true;
-        $scope.submitButtonDisabled = true;
-        if (contactform.$valid) {
-            $http.post('https://prolinee-laharshah.c9.io/proline/contact-form.php',$scope.formData)
-            .success(function(data){
-                console.log(data);
-                if (data.success) { //success comes from the return json object
-                    $scope.submitButtonDisabled = true;
-                    $scope.resultMessage = data.message;
-                    $scope.result='bg-success';
-                } else {
-                	console.log(data);
-                	$scope.submitButtonDisabled = false;
-                    $scope.resultMessage = data.message;
-                    $scope.result='bg-danger';
-                }
-            });
-        } else {
-            $scope.submitButtonDisabled = false;
-            $scope.resultMessage = 'Failed <img src="http://www.chaosm.net/blog/wp-includes/images/smilies/icon_sad.gif" alt=":(" class="wp-smiley">  Please fill out all the fields.';
-            $scope.result='bg-danger';
-        }
-    }    
-
-	
-	
-});
-;angular.module('prolineApp.contact').factory('contactFactory', ['$http', function ($http) {
-		
-	/**
-		 * Blank authFactory
-		 * @type {Object}
-		 */
-		var authFactory = {};
-
-		// // var apiUrl = 'http://localhost:8080/eluck/api/index.php/v1/';
-
-		// var apiUrl = 'https://prolinee-laharshah.c9.io/proline/contact-form.php';
-
-		// authFactory.processEmailSender = function (user) {
-		// 	console.log("model");
-		// 	return $http.post(apiUrl, user);
-		// };
-		
-		return authFactory;
-		
-		
-	}]);;angular.module('prolineApp.CustomProducts', []);
+	}]);;;;angular.module('prolineApp.CustomProducts', []);
 
 angular.module('prolineApp.CustomProducts').config(['$routeProvider', function($routeProvider) {
 				
@@ -358,15 +250,54 @@ angular.module('prolineApp').controller('CustomProductsController', function ($s
 
 angular.module('prolineApp').controller('carouselController', function($scope) {
 
+    $scope.myInterval = 5000;
     $scope.slides = [{
-        image: 'assets/images/home-slideibar/slider_img_1.jpg'
+        image: 'assets/images/home-slideibar/sliderimg1.jpg'
     }, {
-        image: 'assets/images/home-slideibar/very_large_twitter_proline.jpg'
+        image: 'assets/images/home-slideibar/sliderimg2.jpg'
     }, {
-        image: 'assets/images/home-slideibar/very_large_clubs.JPG'
+        image: 'assets/images/home-slideibar/sliderimg3.jpg'
     }, {
-        image: 'assets/images/home-slideibar/very_large_1.jpg'
+        image: 'assets/images/home-slideibar/sliderimg4.jpg'
     }];
+    
+    $scope.brands = [
+           {
+            img1: 'assets/images/products/apparel/small_Gold_Kartel_Logo.jpg',
+            img2: 'assets/images/products/apparel/small_j_lindeberg_logo.jpg',
+            img3: 'assets/images/products/apparel/small_maide_logo_black.jpg',
+            img4: 'assets/images/products/apparel/small_mg_logo.jpg'
+        },{
+            img1: 'assets/images/products/apparel/small_travis-matthew.png',
+            img2: 'assets/images/products/clubs/small_11810259-titleist.jpg',
+            img3: 'assets/images/products/clubs/small_cleveland.jpeg',
+            img4: 'assets/images/products/clubs/small_fourteen.jpg'
+        }, {
+            img1: 'assets/images/products/clubs/small_logo_BETTINARDI.jpg',
+            img2: 'assets/images/products/clubs/small_miura_logo.jpg',
+            img3: 'assets/images/products/clubs/small_Mizuno-Logo.gif',
+            img4: 'assets/images/products/clubs/small_OdysseyLogo.png'
+        }, {
+            img1: 'assets/images/products/clubs/small_ping.jpg',
+            img2: 'assets/images/products/clubs/small_scotty-cameron.jpeg',
+            img3: 'assets/images/products/footwear/small_ECCO_LOGO.JPG',
+            img4: 'assets/images/products/footwear/small_footjoy-logo.jpg'
+        }, {
+            img1: 'assets/images/products/footwear/small_kikkor-golf-logo_t640.jpg',
+            img2: 'assets/images/products/footwear/small_Oakley.jpg',
+            img3: 'assets/images/products/footwear/small_true_llinkwear.jpg',
+            img4: 'assets/images/products/apparel/small_Gold_Kartel_Logo.jpg'
+        }];
+        
+}).directive('disableAnimation', function($animate){
+    return {
+        restrict: 'A',
+        link: function($scope, $element, $attrs){
+            $attrs.$observe('disableAnimation', function(value){
+                $animate.enabled(!value, $element);
+            });
+        }
+    }
 });;;angular.module('prolineApp.instructors', []);
 
 angular.module('prolineApp.instructors').config(['$routeProvider', function($routeProvider) {
@@ -410,7 +341,7 @@ angular.module('prolineApp').controller('InstructorsController', function ($scop
   							facebook:false,
   							twitter: false,
   							linkedin:'https://www.linkedin.com/pub/scott-thomas/12/215/185',
-  							imgpath:'assets/images/instructors/large_thumb_gaberios.JPG',
+  							imgpath:'assets/images/instructors/scott-thomas.jpg',
                 			inid:'in3'
   						},
   						{

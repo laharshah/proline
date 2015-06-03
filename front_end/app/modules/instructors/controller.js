@@ -45,7 +45,7 @@ angular.module('prolineApp').controller('InstructorsController', function ($scop
   							facebook:false,
   							twitter: false,
   							linkedin:'https://www.linkedin.com/pub/scott-thomas/12/215/185',
-  							imgpath:'assets/images/instructors/large_thumb_gaberios.JPG',
+  							imgpath:'assets/images/instructors/scott-thomas.jpg',
                 			inid:'in3'
   						},
   						{

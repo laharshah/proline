@@ -1,18 +1,67 @@
 body {
 	background-image: url("../images/home-slideibar/golf-ball-round1.png");
 }
-h1,
-h2,
 h3,
 h5,
 h6 {
 	font-family: 'Oxygen', sans-serif !important;
 }
-#company-description h4{
+h1 {
+	color: #3498db;
+	font-family: Pacifico;
+	font-size: 72px;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 0 auto 10px;
+	text-align: center;
+}
+h1.title {
+	font-size: 96px;
+}
+h2 {
+	font-family: Pacifico;
+	font-size: 36px;
+	margin: 20px auto;
+	text-align: center;
+}
+h4 {
+	font-family: Pacifico;
+	font-size: 28px;
+	margin: 20px auto;
+	text-align: center;
+}
+hr {
+	background: #fff;
+	border: 0;
+	height: 1px;
+	margin: 40px 0;
+}
+p {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.5;
+	margin-bottom: 40px;
+	text-align: center;
+}
+p.note {
+	font-size: 12px;
+}
+p.cdn {
+	font-size: 14px;
+}
+p.guff {
+	font-size: 16px;
+}
+pre {
+	background: #fff;
+	margin: 0 10px 20px;
+	padding: 10px;
+}
+#company-description > h4 {
 	font-family: "Permanent Marker", cursive !important;
 }
-#company-description h4:hover{
-	color:#FF9900;
+#company-description > h4:hover {
+	color: #FF9900;
 }
 dl>dd {
 	color: #000;
@@ -28,15 +77,15 @@ dl>dd {
 	color: orange;
 }
 .btn-booknow {
-	padding-top :5px;
-	padding-right:17%;
+	padding-top: 5px;
+	padding-right: 17%;
 }
 #btn-book {
-	width:250%;
-	height:75px;
-	font-size:22px;
+	width: 250%;
+	height: 75px;
+	font-size: 22px;
 	font-family: 'Impact';
-	background:#336699;
+	background: #336699;
 }
 #main-header {
 	z-index: 999;
@@ -45,18 +94,25 @@ dl>dd {
 }
 #main-sidebar {
 	/*margin-top:-1%;*/
+	/*margin-left: 1%;*/
 	
-	margin-left: 1%;
-	width: 7%;
+	width: auto;
+	/* 7%*/
 }
 #main-content {
-	padding-left: 19%;
-	padding-right: 5%;
-	width: 100%;
+	/*padding-left: 19%;*/
+	/*padding-right: 5%;*/
+	
+	width: auto;
+	/* modified temp */
+	
 	background-image: url("../images/home-slideibar/golf-ball-round1.png");
 }
 #main-footer {
 	width: 100%;
+}
+.main-container {
+	max-width:1400px
 }
 #logopic {
 	padding-left: 1%;
@@ -67,13 +123,12 @@ dl>dd {
 	z-index: 999;
 	margin-left: 3%;
 	margin-right: 3%;
-
 	height: 5%;
-	background:transparent;
-
+	background: transparent;
 }
-
 .footerbg {
+	padding-top:3%;
+	padding-bottom:3%;
 	background-color: #F7F3EB;
 }
 .left {
@@ -109,16 +164,10 @@ dl>dd {
 .join_email_txtbox {
 	width: 66%;
 	float: left;
-	margin-left: 12px;
+	margin-left: 6px;
 }
 .join_email_btn {
-	margin-top: -7px;
-	margin-left: -10px;
-}
-.join_email_btn:hover {
-	margin-top: -7px;
-	margin-left: -10px;
-	/*background-color: ;*/
+	margin-left: 6px;
 }
 .contact_p {
 	margin-bottom: 0px;
@@ -132,7 +181,7 @@ dl>dd {
 	width: auto;
 	height: auto;
 }
-.navbar_z {
+.navbar-z-index {
 	z-index: 5;
 }
 .seeThru {
@@ -149,11 +198,13 @@ dl>dd {
 	color: #571400;
 }
 .footer-facebook {
+	margin-left:35px;
 	width: 32px;
 	height: 32px;
 	background: url(../images/socialmediaimg/facebook_32.png) 32px -32px;
 }
 .footer-twitter {
+	
 	width: 32px;
 	height: 32px;
 	background: url(../images/socialmediaimg/twitter_32.png) 32px -32px;
@@ -170,6 +221,10 @@ dl>dd {
 	padding-top: 1%;
 	padding-left: 1%;
 }
+#fourth-footer{
+	padding-top:1%;
+	padding-bottom:1%;
+}
 .ulbgcolor {
 	background: rgb(86, 114, 0);
 }
@@ -179,17 +234,93 @@ dl>dd {
 .panel-heading {
 	background-color: rgb(136, 191, 232);
 }
-.bg-white{
-background: rgb(255,255,255); /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ3JSIgc3RvcC1jb2xvcj0iI2Y2ZjZmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZGVkZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(47%,rgba(246,246,246,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-8 */
-
-
+.bg-white {
+	background: rgb(255, 255, 255);
+	/* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ3JSIgc3RvcC1jb2xvcj0iI2Y2ZjZmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZGVkZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+	/* FF3.6+ */
+	
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
+	/* Chrome,Safari4+ */
+	
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+	/* Chrome10+,Safari5.1+ */
+	
+	background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+	/* Opera 11.10+ */
+	
+	background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+	/* IE10+ */
+	
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+	/* W3C */
+	
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
+	/* IE6-8 */
 }
+#quote-carousel {
+	padding: 0 10px 30px 10px;
+	margin-top: 30px;
+}
+#quote-carousel .carousel-control {
+	background: none;
+	color: #CACACA;
+	font-size: 2.3em;
+	text-shadow: none;
+	margin-top: 30px;
+}
+#quote-carousel .carousel-control.left {
+	left: -60px;
+}
+#quote-carousel .carousel-control.right {
+	right: -60px;
+}
+#quote-carousel .carousel-indicators {
+	right: 50%;
+	top: auto;
+	bottom: 0px;
+	margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	cursor: pointer;
+	border: 4px solid #CCC;
+	border-radius: 50px;
+	opacity: 0.4;
+	overflow: hidden;
+	transition: all 0.4s;
+}
+#quote-carousel .carousel-indicators .active {
+	background: #ffffff;
+	width: 128px;
+	height: 128px;
+	border-radius: 100px;
+	border-color: #f33;
+	opacity: 1;
+	overflow: hidden;
+}
+.carousel-inner {
+	/*min-height: 260px;*/
+}
+.item blockquote {
+	border-left: none;
+	margin: 0;
+}
+.item blockquote p:before {
+	content: "\f10d";
+	font-family: 'Fontawesome';
+	float: left;
+	margin-right: 10px;
+}
+#mc_embed_signup {
+	background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; 
+}
+.margin-bottom-10 {
+	margin-bottom:10px;
+}
+	

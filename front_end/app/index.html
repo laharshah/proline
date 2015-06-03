@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="prolineApp">
+<html lang="en" ng-app="prolineApp" ng-controller="rootController">
 
 <head>
 	<meta charset="utf-8">
@@ -11,18 +11,21 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css" />
 
 	<!-- //for slding navigation bar -->
 	<link href="assets/css/simple-sidebar.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="assets/css/carousel-slide.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="bower_components/angular-slick/app/styles/main.css" media="all" rel="stylesheet" type="text/css" />
+	
+	<!-- Mailchimp css -->
+	<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+	
 
 
 	<!-- Custom CSS Stylesheet -->
 	<link rel="stylesheet" href="assets/css/carousel-slide.css">
 	<link rel="stylesheet" href="assets/css/custom-style.css">
-	<!--<link rel="stylesheet" href="bower_components/uikit/css/uikit.css">-->
 
 </head>
 
@@ -30,41 +33,55 @@
 
 	<!--Header of the page -->
 	<header id="main-header">
-				<a href="#!/">
-						<img id="logopic" src="assets/images/logo.png" alt="logo"/>
-				</a>
-				<div class="pull-right btn-booknow">
-					<a href="https://booknow.appointment-plus.com/6r0crrgy/" target="_blank">
-						<button id="btn-book" name="Book Now" class="btn btn-success">Book Now</button>
-					</a>
-				</div>
-					<h1 class="header_h1 header_divbg">&nbsp;</h1>
-
+		<div ng-include src="'views/header.html'"></div>
 	</header>
-	<aside id="main-sidebar">
-		<div ng-include src="'views/navbar.html'"></div>
-	</aside>	
-	<section id="main-content">
-		<!-- Common View -->
-		<div ng-view></div>
-	</section>
+
+	<div class="container main-container">
+		<div class="row">
+			<div class="col-sm-12">
+
+				<aside id="main-sidebar">
+					<div class="col-md-3">
+						<div ng-include src="'views/navbar.html'"></div>
+					</div>
+				</aside>
+
+				<section id="main-content">
+					<div class="col-sm-9">
+						<div ng-view></div>
+					</div>
+					<!-- end SECTION -->
+				</section>
+			</div>
+			<!-- end columns -->
+		</div>
+		<!-- end row -->
+	</div>
+	<!-- end container -->
+	<div class="container">
+		<br/>
+	</div>
 	<footer id="main-footer">
 		<div ng-include src="'views/footer.html'"></div>
 	</footer>
 
-<script type="text/javascript">
-  WebFontConfig = {
-    google: { families: [ 'Permanent+Marker::latin' ] }
-  };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })(); </script>
+	<!-- Google fonts -->
+	<script type="text/javascript">
+		WebFontConfig = {
+			google: {
+				families: ['Permanent+Marker::latin']
+			}
+		};
+		(function() {
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		})();
+	</script>
 
 
 
@@ -79,15 +96,16 @@
 	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
 	<!-- Angular Modules Vendors -->
 	<script src="dist/angular-modules.min.js" type="text/javascript"></script>
-	<script src="bower_components/angular-slick/dist/slick.js"></script>
+	<!--<script src="bower_components/angular-slick/dist/slick.js"></script>-->
 
 	<!-- Application -->
 	<script src="dist/app.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
 	<script type="text/javascript" src="assets/js/angular-ap-lateral-slide-menu.js"></script>
+	<script type="text/javascript" src="assets/js/contactus.js"></script>
 	<!--<script type="text/javascript" src="bower_components/uikit/js/uikit.js"></script>-->
-    <!-- Script to Activate the Carousel -->
+	<!-- Script to Activate the Carousel -->
 
 </body>
 

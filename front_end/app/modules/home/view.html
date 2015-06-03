@@ -1,28 +1,29 @@
+<!-- Main Carousel -->
 <article id="slider-section-height">
     <div class="container">
         <div class="row">
-            <!--<div id="main-nav-mini" class="col-sm-12 well well-sm">-->
-            <!--    <a ng-href="#!/instructors" ng-class="{active:isActive('/instructors')}"> Instructors</a> | <a ng-href="#!/club-fitting" ng-class="{active:isActive('/club-fitting')}"> Club Fitting & Repair</a> | <a ng-href="#!/custom-products" ng-class="{active:isActive('/custom-products')}"> Custom Gear</a> | <a ng-href="#!/contact" ng-class="{active:isActive('/contact')}"> Contact</a>-->
-            <!--</div>-->
-            
-            <div class="col-sm-12">
+            <div class="col-md-12">
                 <div id="main-carousel" ng-controller="carouselController">
                     <div id="slides_control">
                         <div>
-                            <carousel interval="2000">
+                            <carousel interval="myInterval" disable-animation="true">
                                 <slide ng-repeat="slide in slides" active="slide.active">
                                     <img class="slide-img" ng-src="{{slide.image}}">
                                     <!--<div class="carousel-caption">-->
                                     <!--     <h4>Slide {{$index+1}}</h4>-->
                                     <!--</div>-->
                                 </slide>
-                            </carousel><!-- end carousel -->
+                            </carousel>
+                            <!-- end carousel -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </article>
+<!-- end carousel -->
+
 <article id="company-description">
     <h4><br/>{{companydescription}}</h4>
 </article>
@@ -30,13 +31,13 @@
 <article id="service-boxes">
     <div class="container">
         <div class="row text-center">
-
             <div class="col-sm-12 col-md-4 col-lg-4 hero-feature">
                 <div class="thumbnail">
                     <img width="335px" height="200px" src="assets/images/instructors/putting.jpg" alt="">
                     <div class="caption">
                         <h3>Golf Lessons</h3>
-                        <p style="margin-bottom:5px">Proline's PGA professionals, with over 25 years of teaching experience, will make sure you're at the top of your game all year-round. We have best instructors for you, meet them here <br/>...</p>
+                        <p style="margin-bottom:5px">Proline's PGA professionals, with over 25 years of teaching experience, will make sure you're at the top of your game all year-round. We have the best instructors around - meet them here
+                            <br/>...</p>
                         <p style="margin-bottom:5px">
                             <a href="#!/instructors" class="btn btn-primary">Read More</a>
                         </p>
@@ -49,7 +50,8 @@
                     <img width="335px" height="200px" src="assets/images/custom-products/mitchell.jpg" alt="">
                     <div class="caption">
                         <h3>Custom Products</h3>
-                        <p style="margin-bottom:5px">Golf gear with custom logo are great for corporate outings, team building events, trade show giveaways or business gifts. We can put your logo on custom products such as pperal, bags,<br/>...</p>
+                        <p style="margin-bottom:5px">Golf gear with custom logo are great for corporate outings, team building events, trade show giveaways, or business gifts. We can put your logo on custom products such as apperal, balls, or bags
+                            <br/>...</p>
                         <p style="margin-bottom:5px">
                             <a href="#!/custom-products" class="btn btn-primary">Read More</a>
                         </p>
@@ -62,33 +64,79 @@
                     <img style="width:335px" height="200px" src="assets/images/club-fitting/small_golf-club-fitting123.jpg" alt="">
                     <div class="caption">
                         <h3>Club Fitting & Repair</h3>
-                        <p style="margin-bottom:5px">With over 20 years of combined experience, Proline is your Chicagoland source for club repair and customization. Whether you need a quick tune-up or want to bring the old-faithfuls back to life.<br/>...</p>
+                        <p style="margin-bottom:5px">With over 20 years of combined experience, Proline is your Chicagoland source for club repair and customization. Whether you need a quick tune-up or want to bring the old-faithfuls back to life.<br /><br />...
+                            </p>
                         <p style="margin-bottom:5px">
                             <a href="#!/club-fitting" class="btn btn-primary">Read More</a>
                         </p>
                     </div>
                 </div>
             </div>
-            <!-- end club fitting/repair -->
-            <!--<div class="col-md-3 col-sm-3 hero-feature">-->
-            <!--    <div class="thumbnail">-->
-            <!--        <img width="335px" height="200px" src="https://proline-laharshah.c9.io/front_end/app/assets/images/contact-us/putter.jpg" alt="">-->
-            <!--        <div class="caption">-->
-            <!--            <h3>Contact Us</h3>-->
-            <!--            <p style="margin-bottom:5px">-->
-            <!--                Chicago Location: 925 W Chicago Ave #1-->
-            <!--                <br/> Chicago, IL 60642-->
-            <!--                <br /> Glenview Location : 771 N Milwaukee Ave Glenview, IL 60025</br>312-738-2427-->
-            <!--            </p>-->
-            <!--            <p style="margin-bottom:5px">-->
-            <!--                <a href="#!/contact" class="btn btn-primary">Read More</a>-->
-            <!--            </p>-->
-            <!--        </div>-->
-            <!--    </div>-->
-            <!--</div>-->
-            <!-- end contact us -->
+        </div>
+    </div>
+    </div>
+</article>
+<!-- end service boxes -->
+<article id="brand-carousel">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Our Product BRANDS</h2>
+                <div id="courseCarousel" ng-controller="carouselController" class="margin-bottom-10 carousel slide">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <a href="#x"><img src="assets/images/products/footwear/small_true_llinkwear.jpg" width="100%" height="200px" />
+                                    </a>
+                                </div>
+                                <div class="col-sm-3">
+                                    <a href="#x"><img src="assets/images/products/footwear/small_Oakley.jpg" width="100%" height="200px" />
+                                    </a>
+                                </div>
+                                <div class="col-sm-3">
+                                    <a href="#x"><img src="assets/images/products/footwear/small_kikkor-golf-logo_t640.jpg" width="100%" height="200px" />
+                                    </a>
+                                </div>
+                                <div class="col-sm-3">
+                                    <a href="#x"><img src="assets/images/products/apparel/small_j_lindeberg_logo.jpg" width="100%" height="200px" />
+                                    </a>
+                                </div>
+                            </div>
+                            <!--/row-->
+                        </div>
+                        <!--/item-->
+                        <div class="item" ng-repeat="brand in brands">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <a href="#x"><img src="{{brand.img1}}" width="100%" height="200px" />
+                                    </a>
+                                </div>
+                                <div class="col-sm-3">
+                                    <a href="#x"><img src="{{brand.img2}}" width="100%" height="200px" />
+                                    </a>
+                                </div>
+                                <div class="col-sm-3">
+                                    <a href="#x"><img src="{{brand.img3}}" width="100%" height="200px" />
+                                    </a>
+                                </div>
+                                <div class="col-sm-3">
+                                    <a href="#x"><img src="{{brand.img4}}" width="100%" height="200px" />
+                                    </a>
+                                </div>
+                            </div>
+                            <!--/row-->
+                        </div>
+                        <!--/item-->
+
+                    </div>
+                    <!--/carousel-inner-->
+                    <a class="left carousel-control" ng-non-bindable href="#courseCarousel" data-slide="prev">‹</a>
+                    <a class="right carousel-control" href="#courseCarousel" ng-non-bindable data-slide="next">›</a>
+                </div>
+            </div>
         </div>
     </div>
 </article>
-
-
+<!-- end brand carousel -->

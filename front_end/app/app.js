@@ -4,7 +4,6 @@ angular.module('prolineApp', [
 		'ngCookies',
 		'ui.bootstrap',
 		'xeditable',
-		'slick',
 		'ap.lateralSlideMenu',
 		'prolineApp.auth',
 		'prolineApp.welcome',

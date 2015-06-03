@@ -25,13 +25,52 @@ angular.module('prolineApp').controller('homeController', function($scope, $loca
 
 angular.module('prolineApp').controller('carouselController', function($scope) {
 
+    $scope.myInterval = 5000;
     $scope.slides = [{
-        image: 'assets/images/home-slideibar/slider_img_1.jpg'
+        image: 'assets/images/home-slideibar/sliderimg1.jpg'
     }, {
-        image: 'assets/images/home-slideibar/very_large_twitter_proline.jpg'
+        image: 'assets/images/home-slideibar/sliderimg2.jpg'
     }, {
-        image: 'assets/images/home-slideibar/very_large_clubs.JPG'
+        image: 'assets/images/home-slideibar/sliderimg3.jpg'
     }, {
-        image: 'assets/images/home-slideibar/very_large_1.jpg'
+        image: 'assets/images/home-slideibar/sliderimg4.jpg'
     }];
+    
+    $scope.brands = [
+           {
+            img1: 'assets/images/products/apparel/small_Gold_Kartel_Logo.jpg',
+            img2: 'assets/images/products/apparel/small_j_lindeberg_logo.jpg',
+            img3: 'assets/images/products/apparel/small_maide_logo_black.jpg',
+            img4: 'assets/images/products/apparel/small_mg_logo.jpg'
+        },{
+            img1: 'assets/images/products/apparel/small_travis-matthew.png',
+            img2: 'assets/images/products/clubs/small_11810259-titleist.jpg',
+            img3: 'assets/images/products/clubs/small_cleveland.jpeg',
+            img4: 'assets/images/products/clubs/small_fourteen.jpg'
+        }, {
+            img1: 'assets/images/products/clubs/small_logo_BETTINARDI.jpg',
+            img2: 'assets/images/products/clubs/small_miura_logo.jpg',
+            img3: 'assets/images/products/clubs/small_Mizuno-Logo.gif',
+            img4: 'assets/images/products/clubs/small_OdysseyLogo.png'
+        }, {
+            img1: 'assets/images/products/clubs/small_ping.jpg',
+            img2: 'assets/images/products/clubs/small_scotty-cameron.jpeg',
+            img3: 'assets/images/products/footwear/small_ECCO_LOGO.JPG',
+            img4: 'assets/images/products/footwear/small_footjoy-logo.jpg'
+        }, {
+            img1: 'assets/images/products/footwear/small_kikkor-golf-logo_t640.jpg',
+            img2: 'assets/images/products/footwear/small_Oakley.jpg',
+            img3: 'assets/images/products/footwear/small_true_llinkwear.jpg',
+            img4: 'assets/images/products/apparel/small_Gold_Kartel_Logo.jpg'
+        }];
+        
+}).directive('disableAnimation', function($animate){
+    return {
+        restrict: 'A',
+        link: function($scope, $element, $attrs){
+            $attrs.$observe('disableAnimation', function(value){
+                $animate.enabled(!value, $element);
+            });
+        }
+    }
 });
